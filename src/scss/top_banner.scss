@@ -1,0 +1,78 @@
+.top-banner {
+	display: none;
+	z-index: 1;
+	@media screen and (min-width: 641px) {
+		div {
+			height: 400px;
+			
+		}
+		div.first-page {
+			display: flex;
+			aside {
+				display: flex;
+				flex: 1;
+				&:nth-child(1) {
+					flex-direction: column;
+				}
+				h3 {
+					font-family: $topBannerLine1;
+					&:before, &:after {
+						content: "---";
+					}
+					@include topBannerText;
+				}
+				h1 {
+					@include topBannerText;
+					font-size: 60px;
+					font-family: $topBannerLine2;
+					background: linear-gradient(to right, #cdb0d5 0%, #f4a755 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+				hr {
+					@include topBannerText;
+				}
+				h2 {
+					@include topBannerText;
+					font-family: $mainFont;
+					color: rgb(171, 158, 151);
+				}
+			}
+			
+		}
+		@include topBanner;
+	}
+	@media screen and (min-width: 769px) {
+		div {
+			height: 500px;
+		}
+		@include topBanner;
+	}
+	.slick-list {
+		z-index: 1;
+	}
+
+	.slick-arrow {
+		z-index: 2;
+		height: 100px;
+		background-color: white;
+	}
+	button.slick-prev {
+		left: 0;
+  		@extend .fas;
+		&:before {
+			font-family: 'Font Awesome 5 Free';
+			content: fa-content($fa-var-angle-left);
+			color: rgb(203, 203, 202);
+		}
+	}
+	button.slick-next {
+		right: 0;
+		@extend .fas;
+		&:before {
+			font-family: 'Font Awesome 5 Free';
+			content: fa-content($fa-var-angle-right);
+			color: rgb(203, 203, 202);
+		}
+	}
+}

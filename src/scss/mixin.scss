@@ -1,0 +1,52 @@
+@mixin headerTextsFields {
+	align-items: center;
+	margin-bottom: 3%;
+	font-size: 20px;
+	height: 50px;
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 3%;
+	font-family: $mainFont;
+	div {
+		&:nth-child(1) {
+			flex: 1;
+			text-align: left;
+		}
+		&:nth-child(2) {
+			flex: 1;
+			text-align: right;
+		}
+	}
+}
+
+@mixin topBanner {
+	display: block;
+	div:nth-child(1), div:nth-child(5), div:nth-child(9) {
+		background-image: url("./images/topBanner1.jpg");
+		background-size: cover;
+	}
+	div:nth-child(2), div:nth-child(6) {
+		background-image: url("./images/topBanner2.jpg");
+		background-size: cover;
+	}
+	div:nth-child(3), div:nth-child(7) {
+		background-image: url("./images/topBanner3.jpg");
+		background-size: cover;
+	}
+	div:nth-child(4), div:nth-child(8) {
+		background-image: url("./images/topBanner4.jpg");
+		background-size: cover;
+	}
+	.slick-dots li button {
+		&:before {
+			content: "•";
+			color: $mainThemeColor;
+		}
+	}
+}
+
+@mixin topBannerText {
+	margin: auto;
+	text-align: center;
+}
