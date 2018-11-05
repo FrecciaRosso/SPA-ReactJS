@@ -4058,7 +4058,8 @@ readers do not read off random characters that represent icons */
       color: #cbcbca; }
 
 body {
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: transparent; }
 
 .top {
@@ -4270,6 +4271,16 @@ section.logo-part {
           color: black;
           background-color: white;
           padding-left: 0; }
+        section.logo-part .menu-list:hover {
+          width: auto;
+          top: 0;
+          margin-top: 0;
+          position: initial;
+          display: flex;
+          flex: 3;
+          order: 2;
+          justify-content: space-around;
+          font-size: 16px; }
       section.logo-part aside {
         order: 3; }
         section.logo-part aside .cart, section.logo-part aside .dropdown, section.logo-part aside .dropdown {
