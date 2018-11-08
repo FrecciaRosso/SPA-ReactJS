@@ -6,25 +6,26 @@
 			height: 400px;
 			
 		}
-		div.first-page {
+		div.banner-page {
 			display: flex;
 			aside {
 				display: flex;
 				flex: 1;
-				&:nth-child(1) {
-					flex-direction: column;
-				}
 				h3 {
+					@include topBannerText;
 					font-family: $topBannerLine1;
+					margin-top: 20%;
 					&:before, &:after {
 						content: "---";
 					}
-					@include topBannerText;
 				}
 				h1 {
 					@include topBannerText;
 					font-size: 60px;
 					font-family: $topBannerLine2;
+					line-height: 0.9;
+					margin-top: 0;
+					margin-bottom: 0;
 					background: linear-gradient(to right, #cdb0d5 0%, #f4a755 100%);
 					-webkit-background-clip: text;
 					-webkit-text-fill-color: transparent;
@@ -37,8 +38,22 @@
 					font-family: $mainFont;
 					color: rgb(171, 158, 151);
 				}
+				button {
+					@include topBannerText;
+					background-color: $mainThemeColor;
+					box-sizing: border-box;
+					width: 100px;
+					height: 50px;
+					border: none;
+					border-bottom: solid 2px darken($mainThemeColor, 10%);
+					color: white;
+					margin: auto;
+					margin-top: 0;
+				}
 			}
-			
+			aside.banner-page-text-part {
+				flex-direction: column;
+			}
 		}
 		@include topBanner;
 	}

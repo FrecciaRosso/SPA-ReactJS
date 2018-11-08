@@ -3974,35 +3974,56 @@ readers do not read off random characters that represent icons */
       display: block; }
       .top-banner div {
         height: 400px; }
-      .top-banner div.first-page {
+      .top-banner div.banner-page {
         display: flex; }
-        .top-banner div.first-page aside {
+        .top-banner div.banner-page aside {
           display: flex;
           flex: 1; }
-          .top-banner div.first-page aside:nth-child(1) {
-            flex-direction: column; }
-          .top-banner div.first-page aside h3 {
+          .top-banner div.banner-page aside h3 {
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
             font-family: "Dancing Script", cursive;
-            margin: auto;
-            text-align: center; }
-            .top-banner div.first-page aside h3:before, .top-banner div.first-page aside h3:after {
+            margin-top: 20%; }
+            .top-banner div.banner-page aside h3:before, .top-banner div.banner-page aside h3:after {
               content: "---"; }
-          .top-banner div.first-page aside h1 {
-            margin: auto;
+          .top-banner div.banner-page aside h1 {
+            margin-top: 0;
+            margin-bottom: 0;
             text-align: center;
             font-size: 60px;
             font-family: "Anton", sans-serif;
+            line-height: 0.9;
+            margin-top: 0;
+            margin-bottom: 0;
             background: linear-gradient(to right, #cdb0d5 0%, #f4a755 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; }
-          .top-banner div.first-page aside hr {
-            margin: auto;
+          .top-banner div.banner-page aside hr {
+            margin-top: 0;
+            margin-bottom: 0;
             text-align: center; }
-          .top-banner div.first-page aside h2 {
-            margin: auto;
+          .top-banner div.banner-page aside h2 {
+            margin-top: 0;
+            margin-bottom: 0;
             text-align: center;
             font-family: "Open Sans", sans-serif;
             color: #ab9e97; }
+          .top-banner div.banner-page aside button {
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+            background-color: #fd926d;
+            box-sizing: border-box;
+            width: 100px;
+            height: 50px;
+            border: none;
+            border-bottom: solid 2px #fc6c3b;
+            color: white;
+            margin: auto;
+            margin-top: 0; }
+        .top-banner div.banner-page aside.banner-page-text-part {
+          flex-direction: column; }
       .top-banner div:nth-child(1), .top-banner div:nth-child(5), .top-banner div:nth-child(9) {
         background-image: url("./images/topBanner1.jpg");
         background-size: cover; }
@@ -4179,11 +4200,10 @@ section.logo-part {
     section.logo-part .menu-list:hover {
       text-align: left;
       display: block;
-      color: blue;
       width: 100%;
-      margin-top: 3%;
+      margin-top: 2%;
       position: absolute;
-      top: 100px;
+      top: 200px;
       z-index: 10; }
   section.logo-part .menu {
     align-items: center;
@@ -4209,7 +4229,6 @@ section.logo-part {
     section.logo-part .menu:hover + .menu-list {
       text-align: left;
       display: block;
-      color: blue;
       width: 100%;
       margin-top: 2%;
       position: absolute;
