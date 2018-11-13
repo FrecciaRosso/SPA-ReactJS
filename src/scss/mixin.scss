@@ -51,3 +51,21 @@
 	margin-bottom: 0;
 	text-align: center;
 }
+
+@mixin social($args...) {
+	background-color: nth($args, 2);
+	&:hover {
+		background-color: darken(nth($args, 2), 20%);
+		a {
+			text-decoration: none;
+			color: white;
+		}
+	}
+	a {
+		color: rgb(116, 116, 116);
+		&:after {
+			font-family: 'Font Awesome 5 Brands';
+			content: fa-content(nth($args, 1));
+		}
+	}
+}

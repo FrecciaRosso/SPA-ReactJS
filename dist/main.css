@@ -12,7 +12,8 @@
 .top-banner button.slick-next,
 .far,
 .fal,
-.fab {
+.fab,
+.feedback-panel {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -97,7 +98,8 @@
 .top-banner button.fa-pull-left.slick-next,
 .far.fa-pull-left,
 .fal.fa-pull-left,
-.fab.fa-pull-left {
+.fab.fa-pull-left,
+.fa-pull-left.feedback-panel {
   margin-right: .3em; }
 
 .fa.fa-pull-right,
@@ -106,7 +108,8 @@
 .top-banner button.fa-pull-right.slick-next,
 .far.fa-pull-right,
 .fal.fa-pull-right,
-.fab.fa-pull-right {
+.fab.fa-pull-right,
+.fa-pull-right.feedback-panel {
   margin-left: .3em; }
 
 .fa-spin {
@@ -3948,7 +3951,9 @@ readers do not read off random characters that represent icons */
   src: url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot");
   src: url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2") format("woff2"), url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff") format("woff"), url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf") format("truetype"), url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
-.fab {
+
+.fab,
+.feedback-panel {
   font-family: 'Font Awesome 5 Brands'; }
 
 /*!
@@ -4077,6 +4082,111 @@ readers do not read off random characters that represent icons */
       font-family: 'Font Awesome 5 Free';
       content: "\F105";
       color: #cbcbca; }
+
+.feedback-panel {
+  display: none; }
+  @media screen and (min-width: 641px) {
+    .feedback-panel {
+      padding-left: 3%;
+      padding-right: 3%;
+      height: 50px;
+      color: #747474;
+      background-color: #ededed;
+      display: flex;
+      align-items: center;
+      font-size: 0.8rem; }
+      .feedback-panel .feedback-panel-label {
+        flex: 2; }
+      .feedback-panel .email-input {
+        flex: 3; }
+        .feedback-panel .email-input form {
+          display: flex; }
+          .feedback-panel .email-input form input {
+            width: 80%; }
+          .feedback-panel .email-input form .plus {
+            width: 25px;
+            border: none;
+            border-bottom: 2px solid;
+            background-color: #fd926d;
+            border-bottom-color: #fc6c3b;
+            cursor: pointer; }
+            .feedback-panel .email-input form .plus:after {
+              content: "+";
+              color: white;
+              font-weight: bold;
+              font-size: 1.5em; }
+            .feedback-panel .email-input form .plus:hover {
+              background-color: #fc6c3b; }
+      .feedback-panel .gap-column {
+        flex: 3; }
+      .feedback-panel .facebook {
+        flex: 1;
+        text-align: center;
+        line-height: 2;
+        border: none;
+        height: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 150%;
+        cursor: pointer;
+        background-color: #f7f7f7; }
+        .feedback-panel .facebook:hover {
+          background-color: #c4c4c4; }
+          .feedback-panel .facebook:hover a {
+            text-decoration: none;
+            color: white; }
+        .feedback-panel .facebook a {
+          color: #747474; }
+          .feedback-panel .facebook a:after {
+            font-family: 'Font Awesome 5 Brands';
+            content: "\F39E"; }
+      .feedback-panel .twitter {
+        flex: 1;
+        text-align: center;
+        line-height: 2;
+        border: none;
+        height: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 150%;
+        cursor: pointer;
+        background-color: #ededed; }
+        .feedback-panel .twitter:hover {
+          background-color: #bababa; }
+          .feedback-panel .twitter:hover a {
+            text-decoration: none;
+            color: white; }
+        .feedback-panel .twitter a {
+          color: #747474; }
+          .feedback-panel .twitter a:after {
+            font-family: 'Font Awesome 5 Brands';
+            content: "\F099"; }
+      .feedback-panel .pinterest {
+        flex: 1;
+        text-align: center;
+        line-height: 2;
+        border: none;
+        height: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 150%;
+        cursor: pointer;
+        background-color: #f7f7f7; }
+        .feedback-panel .pinterest:hover {
+          background-color: #c4c4c4; }
+          .feedback-panel .pinterest:hover a {
+            text-decoration: none;
+            color: white; }
+        .feedback-panel .pinterest a {
+          color: #747474; }
+          .feedback-panel .pinterest a:after {
+            font-family: 'Font Awesome 5 Brands';
+            content: "\F0D2"; } }
+  @media screen and (min-width: 769px) {
+    .feedback-panel {
+      font-size: 1rem;
+      padding-left: 10%;
+      padding-right: 10%; } }
 
 body {
   max-width: 1200px;
