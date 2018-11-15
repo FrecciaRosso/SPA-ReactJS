@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 @charset "UTF-8";
 /*!
  * Font Awesome Free 5.4.2 by @fontawesome - https://fontawesome.com
@@ -10,10 +11,12 @@
 .fas,
 .top-banner button.slick-prev,
 .top-banner button.slick-next,
+section.collections-grid,
 .far,
 .fal,
 .fab,
-.feedback-panel {
+.feedback-panel,
+section.collections-grid {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -96,20 +99,24 @@
 .fas.fa-pull-left,
 .top-banner button.fa-pull-left.slick-prev,
 .top-banner button.fa-pull-left.slick-next,
+section.fa-pull-left.collections-grid,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left,
-.fa-pull-left.feedback-panel {
+.fa-pull-left.feedback-panel,
+section.fa-pull-left.collections-grid {
   margin-right: .3em; }
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
 .top-banner button.fa-pull-right.slick-prev,
 .top-banner button.fa-pull-right.slick-next,
+section.fa-pull-right.collections-grid,
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right,
-.fa-pull-right.feedback-panel {
+.fa-pull-right.feedback-panel,
+section.fa-pull-right.collections-grid {
   margin-left: .3em; }
 
 .fa-spin {
@@ -3936,7 +3943,8 @@ readers do not read off random characters that represent icons */
 .fa,
 .fas,
 .top-banner button.slick-prev,
-.top-banner button.slick-next {
+.top-banner button.slick-next,
+section.collections-grid {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
@@ -3953,7 +3961,8 @@ readers do not read off random characters that represent icons */
 
 
 .fab,
-.feedback-panel {
+.feedback-panel,
+section.collections-grid {
   font-family: 'Font Awesome 5 Brands'; }
 
 /*!
@@ -3997,6 +4006,7 @@ readers do not read off random characters that represent icons */
             margin-bottom: 0;
             text-align: center;
             font-size: 60px;
+            font-weight: 800;
             font-family: "Anton", sans-serif;
             line-height: 0.9;
             margin-top: 0;
@@ -4223,20 +4233,106 @@ section.collections-grid {
               font-family: "Open Sans", sans-serif;
               color: #3b3b3c; }
             section.collections-grid .pics-container-1 .caption-1 .line-3 {
-              font-family: "Open Sans", sans-serif;
-              font-weight: bold;
-              font-size: 20px;
-              color: white;
+              width: 24px;
               background-color: #3b3b3c;
+              color: white;
+              text-align: center;
               border-radius: 50%; }
-              section.collections-grid .pics-container-1 .caption-1 .line-3:before, section.collections-grid .pics-container-1 .caption-1 .line-3:after {
-                content: "---"; }
+              section.collections-grid .pics-container-1 .caption-1 .line-3 span {
+                display: inline-block;
+                position: relative; }
+                section.collections-grid .pics-container-1 .caption-1 .line-3 span:before, section.collections-grid .pics-container-1 .caption-1 .line-3 span:after {
+                  content: "";
+                  position: absolute;
+                  height: 5px;
+                  border-bottom: 1px solid #3b3b3c;
+                  top: 7px;
+                  width: 55px; }
+                section.collections-grid .pics-container-1 .caption-1 .line-3 span:before {
+                  right: 100%;
+                  margin-right: 10px; }
+                section.collections-grid .pics-container-1 .caption-1 .line-3 span:after {
+                  left: 100%;
+                  margin-left: 10px; }
+            section.collections-grid .pics-container-1 .caption-1 .line-4 {
+              font-size: 3rem;
+              font-weight: 700;
+              color: #4fafa0; }
         section.collections-grid .pics-container-2 {
           grid-column: 3/5; }
+          section.collections-grid .pics-container-2 .caption-2 .bottom-layer {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            margin-left: 20px;
+            margin-top: 12px;
+            border-radius: 50%;
+            border: solid 3px white;
+            background-color: #4fafa0; }
+          section.collections-grid .pics-container-2 .caption-2 .top-layer {
+            position: absolute;
+            width: 92px;
+            height: 92px;
+            top: 0;
+            margin-left: 24px;
+            margin-top: 16px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap; }
+            section.collections-grid .pics-container-2 .caption-2 .top-layer-line {
+              width: 100%;
+              text-align: center;
+              margin-bottom: 0; }
+              section.collections-grid .pics-container-2 .caption-2 .top-layer-line-1 {
+                margin-top: 10px;
+                font-size: 0.8rem;
+                color: #fd926d;
+                font-family: 'Lobster'; }
+              section.collections-grid .pics-container-2 .caption-2 .top-layer-line-2 {
+                color: #e2dad8;
+                font-family: "Open Sans", sans-serif; }
+              section.collections-grid .pics-container-2 .caption-2 .top-layer-line-3 {
+                margin-bottom: 10px;
+                font-size: 0.6rem;
+                color: darkgray;
+                font-family: "Open Sans", sans-serif;
+                font-weight: bold; }
         section.collections-grid .pics-container-3 {
           grid-column: 3/4; }
+          section.collections-grid .pics-container-3 .caption-3 {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            font-family: "Open Sans", sans-serif;
+            bottom: 0; }
         section.collections-grid .pics-container-4 {
           grid-column: 4/5; }
+          section.collections-grid .pics-container-4 .caption-4 {
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            bottom: 0;
+            top: 0;
+            color: white;
+            width: 70%; }
+            section.collections-grid .pics-container-4 .caption-4 span {
+              font-size: 24px;
+              text-align: center; }
+            section.collections-grid .pics-container-4 .caption-4 button {
+              font-size: 8px;
+              height: 20px;
+              background-color: #4fafa0;
+              border: none; }
+              section.collections-grid .pics-container-4 .caption-4 button:after {
+                font-family: 'Font Awesome 5 Free';
+                content: "\F0DA";
+                color: #cbcbca; }
         section.collections-grid .pics-container .pics {
           width: 100%;
           object-fit: cover; }
