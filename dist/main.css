@@ -4094,104 +4094,129 @@ section.collections-grid {
       color: #cbcbca; }
 
 .feedback-panel {
-  display: none; }
+  display: flex;
+  align-items: center;
+  padding: 0 3%;
+  color: #747474;
+  flex-wrap: wrap; }
+  .feedback-panel .label-1, .feedback-panel .gap-column {
+    display: none; }
+  .feedback-panel .email-input {
+    width: 100%;
+    margin-bottom: 3%; }
+    .feedback-panel .email-input form {
+      display: flex; }
+      .feedback-panel .email-input form input {
+        height: 50px;
+        border: none;
+        padding: 3%;
+        background-color: #ededed;
+        flex: 6; }
+      .feedback-panel .email-input form .plus {
+        flex: 1;
+        border: none;
+        border-bottom: 2px solid;
+        background-color: #fd926d;
+        border-bottom-color: #fc6c3b;
+        cursor: pointer; }
+        .feedback-panel .email-input form .plus:after {
+          content: "+";
+          color: white;
+          font-weight: bold;
+          font-size: 1.5em; }
+        .feedback-panel .email-input form .plus:hover {
+          background-color: #fc6c3b; }
+  .feedback-panel .label-2 {
+    flex: 3;
+    margin-left: 55px; }
+  .feedback-panel .facebook {
+    flex: 1;
+    text-align: center;
+    line-height: 2;
+    border: none;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 150%;
+    cursor: pointer;
+    background-color: #f7f7f7; }
+    .feedback-panel .facebook:hover {
+      background-color: #c4c4c4; }
+      .feedback-panel .facebook:hover a {
+        text-decoration: none;
+        color: white; }
+    .feedback-panel .facebook a {
+      color: #747474; }
+      .feedback-panel .facebook a:after {
+        font-family: 'Font Awesome 5 Brands';
+        content: "\F39E"; }
+  .feedback-panel .twitter {
+    flex: 1;
+    text-align: center;
+    line-height: 2;
+    border: none;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 150%;
+    cursor: pointer;
+    background-color: #ededed; }
+    .feedback-panel .twitter:hover {
+      background-color: #bababa; }
+      .feedback-panel .twitter:hover a {
+        text-decoration: none;
+        color: white; }
+    .feedback-panel .twitter a {
+      color: #747474; }
+      .feedback-panel .twitter a:after {
+        font-family: 'Font Awesome 5 Brands';
+        content: "\F099"; }
+  .feedback-panel .pinterest {
+    flex: 1;
+    text-align: center;
+    line-height: 2;
+    border: none;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 150%;
+    cursor: pointer;
+    background-color: #f7f7f7; }
+    .feedback-panel .pinterest:hover {
+      background-color: #c4c4c4; }
+      .feedback-panel .pinterest:hover a {
+        text-decoration: none;
+        color: white; }
+    .feedback-panel .pinterest a {
+      color: #747474; }
+      .feedback-panel .pinterest a:after {
+        font-family: 'Font Awesome 5 Brands';
+        content: "\F0D2"; }
+  .feedback-panel .pinterest {
+    margin-right: 55px; }
   @media screen and (min-width: 641px) {
     .feedback-panel {
-      padding-left: 3%;
-      padding-right: 3%;
-      height: 50px;
-      color: #747474;
       background-color: #ededed;
-      display: flex;
-      align-items: center;
       font-size: 0.8rem; }
       .feedback-panel .feedback-panel-label {
+        display: block;
         flex: 2; }
       .feedback-panel .email-input {
-        flex: 3; }
-        .feedback-panel .email-input form {
-          display: flex; }
-          .feedback-panel .email-input form input {
-            width: 80%; }
-          .feedback-panel .email-input form .plus {
-            width: 25px;
-            border: none;
-            border-bottom: 2px solid;
-            background-color: #fd926d;
-            border-bottom-color: #fc6c3b;
-            cursor: pointer; }
-            .feedback-panel .email-input form .plus:after {
-              content: "+";
-              color: white;
-              font-weight: bold;
-              font-size: 1.5em; }
-            .feedback-panel .email-input form .plus:hover {
-              background-color: #fc6c3b; }
+        flex: 3;
+        margin-bottom: 0; }
+        .feedback-panel .email-input form input {
+          width: 80%;
+          background-color: white;
+          height: auto; }
+        .feedback-panel .email-input form .plus {
+          width: 25px; }
       .feedback-panel .gap-column {
+        display: block;
         flex: 3; }
-      .feedback-panel .facebook {
-        flex: 1;
-        text-align: center;
-        line-height: 2;
-        border: none;
-        height: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
-        font-size: 150%;
-        cursor: pointer;
-        background-color: #f7f7f7; }
-        .feedback-panel .facebook:hover {
-          background-color: #c4c4c4; }
-          .feedback-panel .facebook:hover a {
-            text-decoration: none;
-            color: white; }
-        .feedback-panel .facebook a {
-          color: #747474; }
-          .feedback-panel .facebook a:after {
-            font-family: 'Font Awesome 5 Brands';
-            content: "\F39E"; }
-      .feedback-panel .twitter {
-        flex: 1;
-        text-align: center;
-        line-height: 2;
-        border: none;
-        height: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
-        font-size: 150%;
-        cursor: pointer;
-        background-color: #ededed; }
-        .feedback-panel .twitter:hover {
-          background-color: #bababa; }
-          .feedback-panel .twitter:hover a {
-            text-decoration: none;
-            color: white; }
-        .feedback-panel .twitter a {
-          color: #747474; }
-          .feedback-panel .twitter a:after {
-            font-family: 'Font Awesome 5 Brands';
-            content: "\F099"; }
+      .feedback-panel .label-2 {
+        margin-left: 0; }
       .feedback-panel .pinterest {
-        flex: 1;
-        text-align: center;
-        line-height: 2;
-        border: none;
-        height: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
-        font-size: 150%;
-        cursor: pointer;
-        background-color: #f7f7f7; }
-        .feedback-panel .pinterest:hover {
-          background-color: #c4c4c4; }
-          .feedback-panel .pinterest:hover a {
-            text-decoration: none;
-            color: white; }
-        .feedback-panel .pinterest a {
-          color: #747474; }
-          .feedback-panel .pinterest a:after {
-            font-family: 'Font Awesome 5 Brands';
-            content: "\F0D2"; } }
+        margin-right: 0; } }
   @media screen and (min-width: 769px) {
     .feedback-panel {
       font-size: 1rem;
