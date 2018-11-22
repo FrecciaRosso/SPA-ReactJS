@@ -13,8 +13,12 @@ body {
 	margin: 0 auto;
 	background-color: transparent;
 }
+h1 {
+	visibility: hidden;
+	width: 100%;
+	height: 0;
+}
 .top {
-		
 	color: white;
 	.top-line {
 		font-family: $mainFont;
@@ -23,27 +27,30 @@ body {
 		font-size: 1em;
 		flex-wrap: wrap;
 		text-align: center;
-		div {
+		p.top-line-text {
+			width: 100%;
+			color: gray;
+			margin: auto;
+		}
+		p.top-line-button-text {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			&:nth-child(1) {
-				width: 100%;
-				color: gray;
-			}
-			&:nth-child(2) {
+			margin-top: 0;
+			margin-bottom: 0;
+			&-1 {
 				flex: 1;
 				background-color: black;
 				border-right: 1px gray;
 			}
-			&:nth-child(3) {
+			&-2 {
 				flex: 3;
 				background-color: black;
 				i {
 					color: gray;
 				}
 			}
-			&:nth-child(4) {
+			&-3 {
 				flex: 1;
 				background-color: black;
 			}
@@ -52,25 +59,25 @@ body {
 			height: 3vh;
 			background-color: black;
 			font-size: 12px;
-			div {
-				&:nth-child(1) {
-					color: white;
-					justify-content: left;
-					padding-left: 20px;
-					flex: 8;
-					width: auto;
-					border-right: solid 1px gray;
-				}
-				&:nth-child(2) {
+			p.top-line-text {
+				color: white;
+				text-align: left;
+				padding-left: 20px;
+				flex: 8;
+				width: auto;
+				border-right: solid 1px gray;
+			}
+			p.top-line-button-text {
+				&-1 {
 					flex: 1;
 					border-right: 1px gray;
 					border-right: solid 1px gray;
 				}
-				&:nth-child(3) {
+				&-2 {
 					flex: 2;
 					border-right: solid 1px gray;
 				}
-				&:nth-child(4) {
+				&-3 {
 					flex: 1;
 					border-right: solid 1px gray;
 					margin-right: 20px;
@@ -81,16 +88,15 @@ body {
 		@media screen and (min-width: 769px) {
 			height: 2.5vh;
 			font-size: 0.8em;
-			div {
-				&:nth-child(1) {
-					padding-left: 10%;
-				}
-				&:nth-child(4) {
-					margin-right: 10%;
+			p.top-line-text {
+				padding-left: 10%;
+			}
+			p.top-line-button-text {
+				&-3 {
+					margin-right: 103px;
 				}
 			}
 		}
-		
 	}
 }
 
@@ -98,17 +104,19 @@ section.logo-part {
 	display: flex;
 	position: relative;
 	flex-wrap: wrap;
-	margin-left: 3%;
-	margin-right: 3%;
+	margin-left: 13px;
+	margin-right: 13px;
 	.logo {
-		margin: 5% auto;
+		margin: 15px auto;
 		display: flex;
+		flex-wrap: wrap;
 		font-size: 2.5em;
 		font-family: $logoFont;
 		align-items: end;
 		font-weight: bold;
 		img {
-			width: 60px;
+			width: 290px;
+			margin: 0 auto;
 		}
 	}
 	aside {
@@ -147,9 +155,8 @@ section.logo-part {
 			text-align: left;
 			display: block;
 			width: 100%;
-			margin-top: 2%;
 			position: absolute;
-			top: 200px;
+			top: 232px;
 			z-index: 10;
 		}
 	}
@@ -165,22 +172,22 @@ section.logo-part {
 			text-align: left;
 			display: block;
 			width: 100%;
-			margin-top: 2%;
 			position: absolute;
-			top: 200px;
+			top: 232px;
 			z-index: 10;
 		}
 	}
 	@media screen and (min-width: 641px) {
-		margin-top: 3%;
-		margin-bottom: 3%;
+		margin-top: 24px;
+		margin-bottom: 24px;
 		.logo {
 			margin: auto;
-			flex: 2;
+			flex: 1;
 			font-size: 2em;
-			img {
-				width: 50px;
-			}
+			width: 50px;
+		}
+		.gap-column {
+			flex: 2;
 		}
 		aside {
 			display: flex;
@@ -191,7 +198,7 @@ section.logo-part {
 				margin-bottom: 0;
 				width: auto;
 				flex: 1;
-				font-size: 14px;
+				font-size: 12px;
 			}
 			.dropdown {
 				display: flex;
@@ -200,29 +207,34 @@ section.logo-part {
 				font-size: 16px;
 			}
 		}
+		.menu-list {
+			&:hover {
+				top: 163px;
+			}
+		}
 		.menu {
-			margin-top: 3%;
+			margin-top: 23px;
 			height: 50px;
 			font-size: 24px;
 			margin-bottom: 0;
 			&:hover + .menu-list {
-				margin-top: 3%;
-				top: 100px;
+				top: 163px;
 			}
 		}
 	}
 
 	@media screen and (min-width: 769px) {
-		margin-left: 10%;
-		margin-right: 10%;
+		margin-left: 103px;
+		margin-right: 103px;
 		.logo {
-			flex: 2;
+			flex: 1;
 			order: 1;
 			margin: auto;
 			font-size: 2em;
-			img {
-				width: 45px;
-			}
+		}
+		.gap-column {
+			order: 2;
+			flex: 1;
 		}
 		.menu {
 			display: none;
@@ -230,7 +242,7 @@ section.logo-part {
 		.menu-list {
 			display: flex;
 			flex: 3;
-			order: 2;
+			order: 3;
 			justify-content: space-around;
 			font-size: 16px;
 			a {
@@ -245,13 +257,13 @@ section.logo-part {
 				position: initial;
 				display: flex;
 				flex: 3;
-				order: 2;
+				order: 3;
 				justify-content: space-around;
 				font-size: 16px;
 			}
 		}
 		aside {
-			order: 3;
+			order: 4;
 			.cart, .dropdown {
 				height: 25px;
 				font-size: 10px;
@@ -259,5 +271,3 @@ section.logo-part {
 		}
 	}
 }
-
-

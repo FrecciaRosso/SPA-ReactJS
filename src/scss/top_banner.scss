@@ -11,15 +11,15 @@
 			aside {
 				display: flex;
 				flex: 1;
-				h3 {
+				.banner-text-1 {
 					@include topBannerText;
 					font-family: $topBannerLine1;
-					margin-top: 20%;
+					margin-top: 77px;
 					&:before, &:after {
 						content: "---";
 					}
 				}
-				h1 {
+				h2.banner-text-2 {
 					@include topBannerText;
 					font-size: 60px;
 					font-weight: 800;
@@ -34,7 +34,7 @@
 				hr {
 					@include topBannerText;
 				}
-				h2 {
+				h2.banner-text-3 {
 					@include topBannerText;
 					font-family: $mainFont;
 					color: rgb(171, 158, 151);

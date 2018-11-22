@@ -3993,15 +3993,15 @@ section.collections-grid {
         .top-banner div.banner-page aside {
           display: flex;
           flex: 1; }
-          .top-banner div.banner-page aside h3 {
+          .top-banner div.banner-page aside .banner-text-1 {
             margin-top: 0;
             margin-bottom: 0;
             text-align: center;
             font-family: "Dancing Script", cursive;
-            margin-top: 20%; }
-            .top-banner div.banner-page aside h3:before, .top-banner div.banner-page aside h3:after {
+            margin-top: 77px; }
+            .top-banner div.banner-page aside .banner-text-1:before, .top-banner div.banner-page aside .banner-text-1:after {
               content: "---"; }
-          .top-banner div.banner-page aside h1 {
+          .top-banner div.banner-page aside h2.banner-text-2 {
             margin-top: 0;
             margin-bottom: 0;
             text-align: center;
@@ -4018,7 +4018,7 @@ section.collections-grid {
             margin-top: 0;
             margin-bottom: 0;
             text-align: center; }
-          .top-banner div.banner-page aside h2 {
+          .top-banner div.banner-page aside h2.banner-text-3 {
             margin-top: 0;
             margin-bottom: 0;
             text-align: center;
@@ -4040,16 +4040,16 @@ section.collections-grid {
         .top-banner div.banner-page aside.banner-page-text-part {
           flex-direction: column; }
       .top-banner div:nth-child(1), .top-banner div:nth-child(5), .top-banner div:nth-child(9) {
-        background-image: url("./images/topBanner1.jpg");
+        background-image: url("./images/top_banner_image_1.jpg");
         background-size: cover; }
       .top-banner div:nth-child(2), .top-banner div:nth-child(6) {
-        background-image: url("./images/topBanner2.jpg");
+        background-image: url("./images/top_banner_image_2.jpg");
         background-size: cover; }
       .top-banner div:nth-child(3), .top-banner div:nth-child(7) {
-        background-image: url("./images/topBanner3.jpg");
+        background-image: url("./images/top_banner_image_3.jpg");
         background-size: cover; }
       .top-banner div:nth-child(4), .top-banner div:nth-child(8) {
-        background-image: url("./images/topBanner4.jpg");
+        background-image: url("./images/top_banner_image_4.jpg");
         background-size: cover; }
       .top-banner .slick-dots li button:before {
         content: "\2022";
@@ -4060,16 +4060,16 @@ section.collections-grid {
       .top-banner div {
         height: 500px; }
       .top-banner div:nth-child(1), .top-banner div:nth-child(5), .top-banner div:nth-child(9) {
-        background-image: url("./images/topBanner1.jpg");
+        background-image: url("./images/top_banner_image_1.jpg");
         background-size: cover; }
       .top-banner div:nth-child(2), .top-banner div:nth-child(6) {
-        background-image: url("./images/topBanner2.jpg");
+        background-image: url("./images/top_banner_image_2.jpg");
         background-size: cover; }
       .top-banner div:nth-child(3), .top-banner div:nth-child(7) {
-        background-image: url("./images/topBanner3.jpg");
+        background-image: url("./images/top_banner_image_3.jpg");
         background-size: cover; }
       .top-banner div:nth-child(4), .top-banner div:nth-child(8) {
-        background-image: url("./images/topBanner4.jpg");
+        background-image: url("./images/top_banner_image_4.jpg");
         background-size: cover; }
       .top-banner .slick-dots li button:before {
         content: "\2022";
@@ -4103,7 +4103,7 @@ section.collections-grid {
     display: none; }
   .feedback-panel .email-input {
     width: 100%;
-    margin-bottom: 3%; }
+    margin-bottom: 12px; }
     .feedback-panel .email-input form {
       display: flex; }
       .feedback-panel .email-input form input {
@@ -4375,6 +4375,11 @@ body {
   margin: 0 auto;
   background-color: transparent; }
 
+h1 {
+  visibility: hidden;
+  width: 100%;
+  height: 0; }
+
 .top {
   color: white; }
   .top .top-line {
@@ -4384,23 +4389,26 @@ body {
     font-size: 1em;
     flex-wrap: wrap;
     text-align: center; }
-    .top .top-line div {
+    .top .top-line p.top-line-text {
+      width: 100%;
+      color: gray;
+      margin: auto; }
+    .top .top-line p.top-line-button-text {
       display: flex;
       justify-content: center;
-      align-items: center; }
-      .top .top-line div:nth-child(1) {
-        width: 100%;
-        color: gray; }
-      .top .top-line div:nth-child(2) {
+      align-items: center;
+      margin-top: 0;
+      margin-bottom: 0; }
+      .top .top-line p.top-line-button-text-1 {
         flex: 1;
         background-color: black;
         border-right: 1px gray; }
-      .top .top-line div:nth-child(3) {
+      .top .top-line p.top-line-button-text-2 {
         flex: 3;
         background-color: black; }
-        .top .top-line div:nth-child(3) i {
+        .top .top-line p.top-line-button-text-2 i {
           color: gray; }
-      .top .top-line div:nth-child(4) {
+      .top .top-line p.top-line-button-text-3 {
         flex: 1;
         background-color: black; }
     @media screen and (min-width: 641px) {
@@ -4408,21 +4416,21 @@ body {
         height: 3vh;
         background-color: black;
         font-size: 12px; }
-        .top .top-line div:nth-child(1) {
+        .top .top-line p.top-line-text {
           color: white;
-          justify-content: left;
+          text-align: left;
           padding-left: 20px;
           flex: 8;
           width: auto;
           border-right: solid 1px gray; }
-        .top .top-line div:nth-child(2) {
+        .top .top-line p.top-line-button-text-1 {
           flex: 1;
           border-right: 1px gray;
           border-right: solid 1px gray; }
-        .top .top-line div:nth-child(3) {
+        .top .top-line p.top-line-button-text-2 {
           flex: 2;
           border-right: solid 1px gray; }
-        .top .top-line div:nth-child(4) {
+        .top .top-line p.top-line-button-text-3 {
           flex: 1;
           border-right: solid 1px gray;
           margin-right: 20px; } }
@@ -4430,26 +4438,28 @@ body {
       .top .top-line {
         height: 2.5vh;
         font-size: 0.8em; }
-        .top .top-line div:nth-child(1) {
+        .top .top-line p.top-line-text {
           padding-left: 10%; }
-        .top .top-line div:nth-child(4) {
-          margin-right: 10%; } }
+        .top .top-line p.top-line-button-text-3 {
+          margin-right: 103px; } }
 
 section.logo-part {
   display: flex;
   position: relative;
   flex-wrap: wrap;
-  margin-left: 3%;
-  margin-right: 3%; }
+  margin-left: 13px;
+  margin-right: 13px; }
   section.logo-part .logo {
-    margin: 5% auto;
+    margin: 15px auto;
     display: flex;
+    flex-wrap: wrap;
     font-size: 2.5em;
     font-family: "Ubuntu", sans-serif;
     align-items: end;
     font-weight: bold; }
     section.logo-part .logo img {
-      width: 60px; }
+      width: 290px;
+      margin: 0 auto; }
   section.logo-part aside {
     width: 100%; }
   section.logo-part .cart, section.logo-part .dropdown {
@@ -4457,7 +4467,7 @@ section.logo-part {
     background-color: #f8f8f8;
     color: #b3b3b3;
     align-items: center;
-    margin-bottom: 3%;
+    margin-bottom: 12px;
     font-size: 20px;
     height: 50px;
     display: flex;
@@ -4493,13 +4503,12 @@ section.logo-part {
       text-align: left;
       display: block;
       width: 100%;
-      margin-top: 2%;
       position: absolute;
-      top: 200px;
+      top: 232px;
       z-index: 10; }
   section.logo-part .menu {
     align-items: center;
-    margin-bottom: 3%;
+    margin-bottom: 12px;
     font-size: 20px;
     height: 50px;
     display: flex;
@@ -4522,20 +4531,20 @@ section.logo-part {
       text-align: left;
       display: block;
       width: 100%;
-      margin-top: 2%;
       position: absolute;
-      top: 200px;
+      top: 232px;
       z-index: 10; }
   @media screen and (min-width: 641px) {
     section.logo-part {
-      margin-top: 3%;
-      margin-bottom: 3%; }
+      margin-top: 24px;
+      margin-bottom: 24px; }
       section.logo-part .logo {
         margin: auto;
-        flex: 2;
-        font-size: 2em; }
-        section.logo-part .logo img {
-          width: 50px; }
+        flex: 1;
+        font-size: 2em;
+        width: 50px; }
+      section.logo-part .gap-column {
+        flex: 2; }
       section.logo-part aside {
         display: flex;
         flex: 1;
@@ -4545,37 +4554,39 @@ section.logo-part {
           margin-bottom: 0;
           width: auto;
           flex: 1;
-          font-size: 14px; }
+          font-size: 12px; }
         section.logo-part aside .dropdown {
           display: flex;
           height: 25px;
           margin-bottom: 0;
           font-size: 16px; }
+      section.logo-part .menu-list:hover {
+        top: 163px; }
       section.logo-part .menu {
-        margin-top: 3%;
+        margin-top: 23px;
         height: 50px;
         font-size: 24px;
         margin-bottom: 0; }
         section.logo-part .menu:hover + .menu-list {
-          margin-top: 3%;
-          top: 100px; } }
+          top: 163px; } }
   @media screen and (min-width: 769px) {
     section.logo-part {
-      margin-left: 10%;
-      margin-right: 10%; }
+      margin-left: 103px;
+      margin-right: 103px; }
       section.logo-part .logo {
-        flex: 2;
+        flex: 1;
         order: 1;
         margin: auto;
         font-size: 2em; }
-        section.logo-part .logo img {
-          width: 45px; }
+      section.logo-part .gap-column {
+        order: 2;
+        flex: 1; }
       section.logo-part .menu {
         display: none; }
       section.logo-part .menu-list {
         display: flex;
         flex: 3;
-        order: 2;
+        order: 3;
         justify-content: space-around;
         font-size: 16px; }
         section.logo-part .menu-list a {
@@ -4589,11 +4600,11 @@ section.logo-part {
           position: initial;
           display: flex;
           flex: 3;
-          order: 2;
+          order: 3;
           justify-content: space-around;
           font-size: 16px; }
       section.logo-part aside {
-        order: 3; }
+        order: 4; }
         section.logo-part aside .cart, section.logo-part aside .dropdown, section.logo-part aside .dropdown {
           height: 25px;
           font-size: 10px; } }
