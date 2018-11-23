@@ -7,6 +7,7 @@
 @import "top_banner";
 @import "feedback_panel";
 @import "collections_grid";
+@import "footer";
 
 body {
 	max-width: 1200px;
@@ -136,28 +137,11 @@ section.logo-part {
 		display: none;
 	}
 	.menu-list {
-		display: none;
+		@include expanderMenuList;
 		font-size: 20px;
 		font-family: $mainFont;
-		a {
-			display: flex;
-			align-items: center;
-			padding-left: 3%;
-			color: white;
-			height: 50px;
-			background-color: rgba(0,0,0,0.7);
-			text-decoration: none;
-			&:hover {
-				background-color: darken(rgba(0,0,0,0.8), 20%);
-			}
-		}
 		&:hover {
-			text-align: left;
-			display: block;
-			width: 100%;
-			position: absolute;
 			top: 232px;
-			z-index: 10;
 		}
 	}
 	.menu {
@@ -168,13 +152,14 @@ section.logo-part {
 			background-color: darken($mainThemeColor, 10%);
 			cursor: pointer;
 		}
-		&:hover + .menu-list {
-			text-align: left;
-			display: block;
-			width: 100%;
-			position: absolute;
+		&:hover + .expander-menu {
+			@include hoverExpanderButton;
 			top: 232px;
-			z-index: 10;
+		}
+		button.expand-menu {
+			background-color: $mainThemeColor;
+			border: 1px solid $mainThemeColor;
+			@include expander;
 		}
 	}
 	@media screen and (min-width: 641px) {

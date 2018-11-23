@@ -1,0 +1,84 @@
+footer {
+	@extend .fas;
+	@include headerTextsFields;
+	display: flex !important;
+	background-color: black;
+	margin-bottom: 0;
+	position: fixed;
+	color: white;
+	bottom: 0;
+	button.expand-footer {
+		background-color: black;
+		border: 1px solid black;
+		&:hover {
+			border: 1px solid white;
+		}
+		&:hover + .expander-menu {
+			@include hoverExpanderButton;
+			bottom: 50px;
+			right: 0;
+		}
+		@include expander;
+	}
+	
+	.right-side {
+		flex-direction: column;
+		display: flex;
+		font-size: 14px;
+	}
+	.bottom-menu {
+		@include expanderMenuList;
+		&:hover {
+			bottom: 50px;
+			right: 0;
+		}
+	}
+
+	@media screen and (min-width: 641px) {
+		position: initial;
+		.left-side {
+			flex: 3;
+			button.expand-footer {
+				display: none;
+			}
+			.bottom-menu {
+				text-align: left;
+				display: flex;
+				width: 100%;
+				right: 0;
+				&:hover {
+					text-align: left;
+					display: flex;
+					width: 100%;
+					right: 0;
+					position: initial;
+				}
+				a {
+					font-size: 12px;
+					margin: auto;
+					padding-left: 0;
+				}
+			}
+		}
+		.right-side {
+			span {
+				font-size: 12px;
+			}
+		}
+	}
+
+	@media screen and (min-width: 769px) {
+		.left-side {
+			.bottom-menu {
+				a {
+					font-size: 11px;
+				}
+			}
+		}
+		.right-side {
+			span {
+				font-size: 11px;
+			}
+		}
+	}
+}

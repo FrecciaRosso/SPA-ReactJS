@@ -12,6 +12,7 @@
 .top-banner button.slick-prev,
 .top-banner button.slick-next,
 section.collections-grid,
+footer,
 .far,
 .fal,
 .fab,
@@ -100,6 +101,7 @@ section.collections-grid {
 .top-banner button.fa-pull-left.slick-prev,
 .top-banner button.fa-pull-left.slick-next,
 section.fa-pull-left.collections-grid,
+footer.fa-pull-left,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left,
@@ -112,6 +114,7 @@ section.fa-pull-left.collections-grid {
 .top-banner button.fa-pull-right.slick-prev,
 .top-banner button.fa-pull-right.slick-next,
 section.fa-pull-right.collections-grid,
+footer.fa-pull-right,
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right,
@@ -3944,7 +3947,8 @@ readers do not read off random characters that represent icons */
 .fas,
 .top-banner button.slick-prev,
 .top-banner button.slick-next,
-section.collections-grid {
+section.collections-grid,
+footer {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
@@ -4370,6 +4374,101 @@ section.collections-grid {
           section.collections-grid .pics-container .pics-4 {
             height: 120px; } }
 
+footer {
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 20px;
+  height: 50px;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 3%;
+  font-family: "Open Sans", sans-serif;
+  display: flex !important;
+  background-color: black;
+  margin-bottom: 0;
+  position: fixed;
+  color: white;
+  bottom: 0; }
+  footer .left-side {
+    flex: 1;
+    text-align: left; }
+  footer .right-side {
+    flex: 1;
+    text-align: right; }
+  footer button.expand-footer {
+    background-color: black;
+    border: 1px solid black; }
+    footer button.expand-footer:hover {
+      border: 1px solid white; }
+    footer button.expand-footer:hover + .expander-menu {
+      text-align: left;
+      display: block;
+      width: 100%;
+      position: absolute;
+      z-index: 10;
+      bottom: 50px;
+      right: 0; }
+    footer button.expand-footer:after {
+      color: white;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: "\F0C9"; }
+  footer .right-side {
+    flex-direction: column;
+    display: flex;
+    font-size: 14px; }
+  footer .bottom-menu {
+    display: none; }
+    footer .bottom-menu a {
+      display: flex;
+      align-items: center;
+      padding-left: 3%;
+      color: white;
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-decoration: none; }
+      footer .bottom-menu a:hover {
+        background-color: rgba(0, 0, 0, 0.8); }
+    footer .bottom-menu:hover {
+      text-align: left;
+      display: block;
+      width: 100%;
+      position: absolute;
+      z-index: 10; }
+    footer .bottom-menu:hover {
+      bottom: 50px;
+      right: 0; }
+  @media screen and (min-width: 641px) {
+    footer {
+      position: initial; }
+      footer .left-side {
+        flex: 3; }
+        footer .left-side button.expand-footer {
+          display: none; }
+        footer .left-side .bottom-menu {
+          text-align: left;
+          display: flex;
+          width: 100%;
+          right: 0; }
+          footer .left-side .bottom-menu:hover {
+            text-align: left;
+            display: flex;
+            width: 100%;
+            right: 0;
+            position: initial; }
+          footer .left-side .bottom-menu a {
+            font-size: 12px;
+            margin: auto;
+            padding-left: 0; }
+      footer .right-side span {
+        font-size: 12px; } }
+  @media screen and (min-width: 769px) {
+    footer .left-side .bottom-menu a {
+      font-size: 11px; }
+    footer .right-side span {
+      font-size: 11px; } }
+
 body {
   max-width: 1200px;
   margin: 0 auto;
@@ -4475,10 +4574,10 @@ section.logo-part {
     box-sizing: border-box;
     padding: 0 3%;
     font-family: "Open Sans", sans-serif; }
-    section.logo-part .cart div:nth-child(1), section.logo-part .dropdown div:nth-child(1) {
+    section.logo-part .cart .left-side, section.logo-part .dropdown .left-side {
       flex: 1;
       text-align: left; }
-    section.logo-part .cart div:nth-child(2), section.logo-part .dropdown div:nth-child(2) {
+    section.logo-part .cart .right-side, section.logo-part .dropdown .right-side {
       flex: 1;
       text-align: right; }
   section.logo-part .dropdown {
@@ -4504,8 +4603,9 @@ section.logo-part {
       display: block;
       width: 100%;
       position: absolute;
-      top: 232px;
       z-index: 10; }
+    section.logo-part .menu-list:hover {
+      top: 232px; }
   section.logo-part .menu {
     align-items: center;
     margin-bottom: 12px;
@@ -4518,22 +4618,30 @@ section.logo-part {
     font-family: "Open Sans", sans-serif;
     background-color: #fd926d;
     color: white; }
-    section.logo-part .menu div:nth-child(1) {
+    section.logo-part .menu .left-side {
       flex: 1;
       text-align: left; }
-    section.logo-part .menu div:nth-child(2) {
+    section.logo-part .menu .right-side {
       flex: 1;
       text-align: right; }
     section.logo-part .menu:hover {
       background-color: #fc6c3b;
       cursor: pointer; }
-    section.logo-part .menu:hover + .menu-list {
+    section.logo-part .menu:hover + .expander-menu {
       text-align: left;
       display: block;
       width: 100%;
       position: absolute;
-      top: 232px;
-      z-index: 10; }
+      z-index: 10;
+      top: 232px; }
+    section.logo-part .menu button.expand-menu {
+      background-color: #fd926d;
+      border: 1px solid #fd926d; }
+      section.logo-part .menu button.expand-menu:after {
+        color: white;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        content: "\F0C9"; }
   @media screen and (min-width: 641px) {
     section.logo-part {
       margin-top: 24px;

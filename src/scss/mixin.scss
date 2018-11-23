@@ -8,15 +8,13 @@
 	box-sizing: border-box;
 	padding: 0 3%;
 	font-family: $mainFont;
-	div {
-		&:nth-child(1) {
-			flex: 1;
-			text-align: left;
-		}
-		&:nth-child(2) {
-			flex: 1;
-			text-align: right;
-		}
+	.left-side {
+		flex: 1;
+		text-align: left;
+	}
+	.right-side {
+		flex: 1;
+		text-align: right;
 	}
 }
 
@@ -68,4 +66,40 @@
 			content: fa-content(nth($args, 1));
 		}
 	}
+}
+
+@mixin expander {
+	&:after {
+		color: white;
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		content: fa-content($fa-var-bars);
+	}
+}
+
+@mixin expanderMenuList {
+	display: none;
+	a {
+		display: flex;
+		align-items: center;
+		padding-left: 3%;
+		color: white;
+		height: 50px;
+		background-color: rgba(0,0,0,0.7);
+		text-decoration: none;
+		&:hover {
+			background-color: darken(rgba(0,0,0,0.8), 20%);
+		}
+	}
+	&:hover {
+		@include hoverExpanderButton;
+	}
+}
+
+@mixin hoverExpanderButton {
+	text-align: left;
+	display: block;
+	width: 100%;
+	position: absolute;
+	z-index: 10;
 }
