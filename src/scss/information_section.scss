@@ -1,0 +1,144 @@
+.information-section {
+	display: none;
+	@media screen and (min-width: 641px) {
+		display: grid;
+		background-color: rgb(237, 237, 237);
+		grid-auto-rows: minmax(150px, auto);
+		grid-template-areas:
+		"customer-service information social guarantee"
+		"campaigns stores . .";
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 12px;
+		padding: 30px;
+		font-size: 0.7rem;
+		.part-title {
+			font-weight: bold;
+			font-size: 1.1rem;
+			height: 20%;
+		}
+		a {
+			color: rgb(116, 116, 116);
+			&:hover {
+				color: darken(rgb(116, 116, 116), 30%);
+				text-decoration: none;
+			}
+		}
+		div[class$="-part"] {
+			display: flex;
+			flex-direction: column;
+		}
+		.customer-service-part {
+			grid-area: customer-service;
+		}
+		.information-part {
+			grid-area: information;
+		}
+		.social-part {
+			grid-area: social;
+			.social-icons {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				.social-icon {
+					text-align: center;
+					border: none;
+					font-size: 16px;
+					cursor: pointer;
+					background-color: rgb(116, 116, 116);
+					width: 45px;
+					height: 45px;
+					margin: 5px 0;
+					border-radius: 50%;
+					a {
+						color: white;
+					}
+				}
+				/*@each $icon in facebook, twitter, pinterest, tumblr, viber, skype {
+					.#//{$icon} {
+						a {
+							&:after {
+								font-family: 'Font Awesome 5 Brands';
+								content: fa-content($fa-var-#//{$icon});
+							}
+						}
+					}
+				}*/
+				.facebook {
+					a {
+						&:after {
+							font-family: 'Font Awesome 5 Brands';
+							content: fa-content($fa-var-facebook);
+						}
+					}
+				}
+				.twitter {
+					a {
+						&:after {
+							font-family: 'Font Awesome 5 Brands';
+							content: fa-content($fa-var-twitter);
+						}
+					}
+				}
+				.pinterest {
+					a {
+						&:after {
+							font-family: 'Font Awesome 5 Brands';
+							content: fa-content($fa-var-pinterest);
+						}
+					}
+				}
+				.tumblr {
+					a {
+						&:after {
+							font-family: 'Font Awesome 5 Brands';
+							content: fa-content($fa-var-tumblr);
+						}
+					}
+				}
+				.viber {
+					a {
+						&:after {
+							font-family: 'Font Awesome 5 Brands';
+							content: fa-content($fa-var-viber);
+						}
+					}
+				}
+				.skype {
+					a {
+						&:after {
+							font-family: 'Font Awesome 5 Brands';
+							content: fa-content($fa-var-skype);
+						}
+					}
+				}
+			}
+		}
+		.guarantee-part {
+			grid-area: guarantee;
+			img {
+				height: 128px;
+				width: 128px;
+				margin: auto;
+			}
+		}
+		.campaigns-part {
+			grid-area: campaigns;
+		}
+		.stores-part {
+			grid-area: stores;
+		}
+	}
+	@media screen and (min-width: 769px) {
+		grid-template-areas:
+		"customer-service information campaigns stores social guarantee";
+		grid-template-columns: repeat(6, 1fr);
+		.social-part {
+			.social-icons {
+				.social-icon {
+					width: 50px;
+					height: 50px;
+				}
+			}
+		}
+	}
+}
