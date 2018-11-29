@@ -1,0 +1,89 @@
+.accepted-cards {
+	display: none;
+	@media screen and (min-width: 641px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 70px;
+		background-color: rgb(247, 247, 247);
+		color: rgb(116, 116, 116);
+		#card1 {
+			background: url(./images/cards_sprite.png) 0 0;
+			height: 25px;
+			width: 40px;
+			list-style: none;
+			background-size: cover;
+		}
+		#card2 {
+			background: url(./images/cards_sprite.png) -45px 0;
+			height: 25px;
+			width: 40px;
+			list-style: none;
+			background-size: cover;
+		}
+		#card3 {
+			background: url(./images/cards_sprite.png) -90px 0;
+			height: 25px;
+			width: 40px;
+			list-style: none;
+			background-size: cover;
+		}
+		#card4 {
+			background: url(./images/cards_sprite.png) -135px 0;
+			height: 25px;
+			width: 40px;
+			list-style: none;
+			background-size: cover;
+		}
+		#card5 {
+			background: url(./images/cards_sprite.png) -180px 0;
+			height: 25px;
+			width: 40px;
+			list-style: none;
+			background-size: cover;
+		}
+		#card6 {
+			background: url(./images/cards_sprite.png) -226px 0;
+			height: 25px;
+			width: 40px;
+			list-style: none;
+			background-size: cover;
+		}
+		#card7 {
+			background: url(./images/cards_sprite.png) -272px 0;
+			height: 25px;
+			width: 40px;
+			list-style: none;
+			background-size: cover;
+		}
+		#card8 {
+			background: url(./images/cards_sprite.png) -318px 0;
+			height: 25px;
+			width: 40px;
+			list-style: none;
+			background-size: cover;
+		}
+		#card9 {
+			background: url(./images/cards_sprite.png) -364px 0;
+			height: 25px;
+			width: 40px;
+			list-style: none;
+			background-size: cover;
+		}
+		#card10 {
+			background: url(./images/cards_sprite.png) -410px 0;
+			height: 25px;
+			width: 40px;
+			list-style: none;
+			background-size: cover;
+		}
+		#card11 {
+			background: url(./images/cards_sprite.png) -456px 0;
+			height: 25px;
+			width: 40px;
+			list-style: none;
+			background-size: cover;
+		}
+	}
+	
+}
