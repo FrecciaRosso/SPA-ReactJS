@@ -7,82 +7,45 @@
 		height: 70px;
 		background-color: rgb(247, 247, 247);
 		color: rgb(116, 116, 116);
-		#card1 {
+
+		.card {
+			height: 25px;
+			width: 40px;
+			list-style: none;
+			background-size: cover !important;
+		}
+		.card-visa {
 			background: url(./images/cards_sprite.png) 0 0;
-			height: 25px;
-			width: 40px;
-			list-style: none;
-			background-size: cover;
 		}
-		#card2 {
+		.card-mastercard {
 			background: url(./images/cards_sprite.png) -45px 0;
-			height: 25px;
-			width: 40px;
-			list-style: none;
-			background-size: cover;
 		}
-		#card3 {
+		.card-paypal {
 			background: url(./images/cards_sprite.png) -90px 0;
-			height: 25px;
-			width: 40px;
-			list-style: none;
-			background-size: cover;
 		}
-		#card4 {
+		.card-american-express {
 			background: url(./images/cards_sprite.png) -135px 0;
-			height: 25px;
-			width: 40px;
-			list-style: none;
-			background-size: cover;
 		}
-		#card5 {
+		.card-visa-electron {
 			background: url(./images/cards_sprite.png) -180px 0;
-			height: 25px;
-			width: 40px;
-			list-style: none;
-			background-size: cover;
 		}
-		#card6 {
+		.card-layer {
 			background: url(./images/cards_sprite.png) -226px 0;
-			height: 25px;
-			width: 40px;
-			list-style: none;
-			background-size: cover;
 		}
-		#card7 {
+		.card-maestro {
 			background: url(./images/cards_sprite.png) -272px 0;
-			height: 25px;
-			width: 40px;
-			list-style: none;
-			background-size: cover;
 		}
-		#card8 {
-			background: url(./images/cards_sprite.png) -318px 0;
-			height: 25px;
-			width: 40px;
-			list-style: none;
-			background-size: cover;
+		.card-delta {
+			background: url(./images/cards_sprite.png) -318px 0;;
 		}
-		#card9 {
+		.card-solo {
 			background: url(./images/cards_sprite.png) -364px 0;
-			height: 25px;
-			width: 40px;
-			list-style: none;
-			background-size: cover;
 		}
-		#card10 {
+		.card-ideal {
 			background: url(./images/cards_sprite.png) -410px 0;
-			height: 25px;
-			width: 40px;
-			list-style: none;
-			background-size: cover;
 		}
-		#card11 {
+		.card-dk {
 			background: url(./images/cards_sprite.png) -456px 0;
-			height: 25px;
-			width: 40px;
-			list-style: none;
-			background-size: cover;
 		}
 	}
 	
