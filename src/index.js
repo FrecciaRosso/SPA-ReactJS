@@ -1,3 +1,6 @@
+import './scss/styles.scss';
+import './libs/slick-1.8.1/slick/slick.min.js';
+
 $(document).ready(function(){
   	$('.top-banner').slick({
     	dots: true,

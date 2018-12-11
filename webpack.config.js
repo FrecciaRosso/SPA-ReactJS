@@ -5,7 +5,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     "mode": "development",
-    "entry": "./src/scss/styles.scss",
+    //"entry": "./src/scss/styles.scss",
+    "entry": "./src/index.js",
+/*    "entry": {
+        "app": './src/index.js',
+        "styles": './src/scss/styles.scss'
+      },*/
     "module": {
         "rules": [
             {
@@ -15,6 +20,13 @@ module.exports = {
                     "css-loader?url=false",
                     "sass-loader"
                 ]
+            },
+            {
+                "test": /\.js$/,
+                "exclude": /node_modules/,
+                "use": {
+                    loader: "babel-loader"
+                }
             }
         ]
     },
