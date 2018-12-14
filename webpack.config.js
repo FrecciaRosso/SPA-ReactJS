@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     "mode": "development",
-    "entry": "./src/scss/styles.scss",
+    "entry": "./src/index.js",
     "module": {
         "rules": [
             {
@@ -15,6 +15,13 @@ module.exports = {
                     "css-loader?url=false",
                     "sass-loader"
                 ]
+            },
+            {
+                "test": /\.js$/,
+                "exclude": /node_modules/,
+                "use": {
+                    loader: "babel-loader"
+                }
             }
         ]
     },
@@ -23,8 +30,6 @@ module.exports = {
             {from:'./src/images',to:'images'} 
         ]),
         new MiniCssExtractPlugin({
-        // Options similar to the same options in webpackOptions.output
-        // both options are optional
             filename: '[name].css',
             chunkFilename: '[id].css',
         })
