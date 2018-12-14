@@ -1,6 +1,6 @@
 import './scss/styles.scss';
 import './libs/slick-1.8.1/slick/slick.min.js';
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
 $(document).ready(function(){
