@@ -2,6 +2,7 @@ import './scss/styles.scss';
 import './libs/slick-1.8.1/slick/slick.min.js';
 import React from "react";
 import ReactDOM from "react-dom";
+import Footer from "./footer.js";
 
 $(document).ready(function(){
   	$('.top-banner').slick({
@@ -15,46 +16,15 @@ $(document).ready(function(){
     });
 });
 
-class Footer extends React.Component {
+class App extends React.Component {
 	render() {
 		return (
-	        <footer>
-				<LeftSide />
-				<RightSide />
-			</footer>
-	    );	
-	}
-}
-
-class LeftSide extends React.Component {
-	render() {
-		return (
-			<div className="left-side">
-				<button className="expander expand-footer"></button>
-				<aside className="expander-menu bottom-menu">
-					<a href="#">Privacy & Cookies</a>
-					<a href="#">Terms & Conditions</a>
-					<a href="#">Accessibility</a>
-					<a href="#">Store Directory</a>
-					<a href="#">About Us</a>
-				</aside>
-			</div>
+			<Footer />
 		);
 	}
 }
 
-class RightSide extends React.Component {
-	render() {
-		return (
-			<div className="right-side">
-				<span>&copy; LookShop.com</span>
-				<span>All rights reserved</span>
-			</div>
-		)
-	}
-}
-
 ReactDOM.render(
-  <Footer />,
+  <App />,
   document.getElementById('bottom')
 );
