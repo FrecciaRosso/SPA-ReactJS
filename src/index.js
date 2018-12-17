@@ -26,5 +26,5 @@ class App extends React.Component {
 
 ReactDOM.render(
   <App />,
-  document.getElementById('top')
+  document.getElementById('app')
 );
