@@ -20,10 +20,10 @@ $(document).ready(function(){
 class App extends React.Component {
 	render() {
 		return (
-			<div>
-			<InformationSection />
-			<Footer />
-			</div>
+			<React.Fragment>
+				<InformationSection />
+				<Footer />
+			</React.Fragment>
 		);
 	}
 }
