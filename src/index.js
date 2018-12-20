@@ -3,6 +3,7 @@ import './libs/slick-1.8.1/slick/slick.min.js';
 import React from "react";
 import ReactDOM from "react-dom";
 import Footer from "./footer.js";
+import InformationSection from "./information_section.js";
 
 $(document).ready(function(){
   	$('.top-banner').slick({
@@ -19,7 +20,10 @@ $(document).ready(function(){
 class App extends React.Component {
 	render() {
 		return (
-			<Footer />
+			<React.Fragment>
+				<InformationSection />
+				<Footer />
+			</React.Fragment>
 		);
 	}
 }
