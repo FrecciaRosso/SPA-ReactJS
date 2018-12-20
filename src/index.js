@@ -4,6 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Footer from "./footer.js";
 import InformationSection from "./information_section.js";
+import AcceptedCards from "./accepted_cards.js";
 
 $(document).ready(function(){
   	$('.top-banner').slick({
@@ -21,6 +22,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
+				<AcceptedCards />
 				<InformationSection />
 				<Footer />
 			</React.Fragment>
