@@ -1,17 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import ListTemplate from "./list.js";
 
 class CustomerServicePart extends React.Component {
 	render() {
+		const servicePartLinks = [
+			{'href': "#", 'innerText': "Contact"},
+			{'href': "#", 'innerText': "FAQ"},
+			{'href': "#", 'innerText': "Terms of payment"},
+			{'href': "#", 'innerText': "Terms of sale"},
+			{'href': "#", 'innerText': "Delivery terms and conditions"},
+			{'href': "#", 'innerText': "Returns and refunds"}
+		];
 		return(
 			<div className="part customer-service-part">
 				<h5 className="part-title">Customer Service</h5>
-				<a href="#">Contact</a>
-				<a href="#">FAQ</a>
-				<a href="#">Terms of payment</a>
-				<a href="#">Terms of sale</a>
-				<a href="#">Delivery terms and conditions</a>
-				<a href="#">Returns and refunds</a>
+				<ListTemplate type="links" links={servicePartLinks}/>
 			</div>
 		);
 	}
@@ -19,41 +23,37 @@ class CustomerServicePart extends React.Component {
 
 class InformationPart extends React.Component {
 	render() {
+		const informationPartLinks = [
+			{'href': "#", 'innerText': "Affiliate"},
+			{'href': "#", 'innerText': "Cookies"},
+			{'href': "#", 'innerText': "How to shop"},
+			{'href': "#", 'innerText': "About Nelly"},
+			{'href': "#", 'innerText': "Investor relations"}
+		];
 		return(
 			<div className="part information-part">
 				<h5 className="part-title">Information</h5>
-				<a href="#">Affiliate</a>
-				<a href="#">Cookies</a>
-				<a href="#">How to shop</a>
-				<a href="#">About Nelly</a>
-				<a href="#">Investor relations</a>
+				<ListTemplate type="links" links={informationPartLinks}/>
 			</div>
-		);
-	}
-}
-
-class SocialIcon extends React.Component {
-	render() {
-		return(
-			<button className={this.props.class}>
-				<a href="#"></a>
-			</button>
 		);
 	}
 }
 
 class SocialPart extends React.Component {
 	render() {
+		const icons = [
+			{ classses: "social-icon facebook" },
+			{ classses: "social-icon twitter" },
+			{ classses: "social-icon pinterest" },
+			{ classses: "social-icon tumblr" },
+			{ classses: "social-icon viber" },
+			{ classses: "social-icon skype" }
+		];
 		return(
 			<div className="part social-part">
 				<h5>Social</h5>
 				<div className="social-icons">
-					<SocialIcon class="social-icon facebook"/>
-					<SocialIcon class="social-icon twitter"/>
-					<SocialIcon class="social-icon pinterest"/>
-					<SocialIcon class="social-icon tumblr"/>
-					<SocialIcon class="social-icon viber"/>
-					<SocialIcon class="social-icon skype"/>
+					<ListTemplate type="icons" icons={icons}/>
 				</div>
 			</div>
 		);
@@ -72,14 +72,17 @@ class GuaranteePart extends React.Component {
 
 class CampaignsPart extends React.Component {
 	render() {
+		const campaignsPartLinks = [
+			{'href': "#", 'innerText': "Evening dresses"},
+			{'href': "#", 'innerText': "Makeup"},
+			{'href': "#", 'innerText': "Fashion forward"},
+			{'href': "#", 'innerText': "Training clothes"},
+			{'href': "#", 'innerText': "Special occasion dresses"}
+		];
 		return(
 			<div className="part campaigns-part">
 				<h5>Campaigns</h5>
-				<a href="#">Evening dresses</a>
-				<a href="#">Makeup</a>
-				<a href="#">Fashion forward</a>
-				<a href="#">Training clothes</a>
-				<a href="#">Special occasion dresses</a>
+				<ListTemplate type="links" links={campaignsPartLinks}/>
 			</div>
 		);
 	}
@@ -87,14 +90,17 @@ class CampaignsPart extends React.Component {
 
 class StoresPart extends React.Component {
 	render() {
+		const storesPartLinks = [
+			{'href': "#", 'innerText': "Paris"},
+			{'href': "#", 'innerText': "Madrid"},
+			{'href': "#", 'innerText': "London"},
+			{'href': "#", 'innerText': "New York"},
+			{'href': "#", 'innerText': "Tokyo"}
+		];
 		return(
 			<div className="part stores-part">
 				<h5>Stores</h5>
-				<a href="#">Paris</a>
-				<a href="#">Madrid</a>
-				<a href="#">London</a>
-				<a href="#">New York</a>
-				<a href="#">Tokyo</a>
+				<ListTemplate type="links" links={storesPartLinks}/>
 			</div>
 		);
 	}

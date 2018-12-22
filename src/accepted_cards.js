@@ -1,22 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import ListTemplate from "./list.js";
 
 class AcceptedCards extends React.Component {
 	render() {
+		const cards = [
+			{ classses: "card card-visa" },
+			{ classses: "card card-mastercard" },
+			{ classses: "card card-paypal" },
+			{ classses: "card card-american-express" },
+			{ classses: "card card-visa-electron" },
+			{ classses: "card card-layer" },
+			{ classses: "card card-maestro" },
+			{ classses: "card card-delta" },
+			{ classses: "card card-solo" },
+			{ classses: "card card-ideal" },
+			{ classses: "card card-dk" }
+		];
 		return(
-			<section class="accepted-cards">
+			<section className="accepted-cards">
 				<span>We accept</span>
-				<li class="card card-visa"></li>
-				<li class="card card-mastercard"></li>
-				<li class="card card-paypal"></li>
-				<li class="card card-american-express"></li>
-				<li class="card card-visa-electron"></li>
-				<li class="card card-layer"></li>
-				<li class="card card-maestro"></li>
-				<li class="card card-delta"></li>
-				<li class="card card-solo"></li>
-				<li class="card card-ideal"></li>
-				<li class="card card-dk"></li>
+				<ListTemplate type="listItems" items={cards}/>
 			</section>
 		);
 	}
