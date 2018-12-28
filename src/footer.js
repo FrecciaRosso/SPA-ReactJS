@@ -1,17 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import ListTemplate from './list.js';
 
 class Footer extends React.Component {
 	renderLeftSide() {
+		const LeftSideLinks = [
+			{'href': "#", 'innerText': "Privacy & Cookies"},
+			{'href': "#", 'innerText': "Terms & Conditions"},
+			{'href': "#", 'innerText': "Accessibility"},
+			{'href': "#", 'innerText': "Store Directory"},
+			{'href': "#", 'innerText': "About Us"}
+		];
+
 		return (
 			<div className="left-side">
 				<button className="expander expand-footer"></button>
 				<aside className="expander-menu bottom-menu">
-					<a href="#">Privacy & Cookies</a>
-					<a href="#">Terms & Conditions</a>
-					<a href="#">Accessibility</a>
-					<a href="#">Store Directory</a>
-					<a href="#">About Us</a>
+					<ListTemplate type="links" links={LeftSideLinks}/>
 				</aside>
 			</div>
 		);
