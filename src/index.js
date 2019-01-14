@@ -25,7 +25,7 @@ class App extends React.Component {
 		return (
 			<React.Fragment>
         <Header />
-<Main />
+        <Main />
 				<AcceptedCards />
 				<InformationSection />
 				<Footer />
