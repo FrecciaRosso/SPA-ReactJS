@@ -2,6 +2,7 @@ import './scss/styles.scss';
 import './libs/slick-1.8.1/slick/slick.min.js';
 import React from "react";
 import ReactDOM from "react-dom";
+import Main from "./main.js";
 import Header from "./header.js";
 import Footer from "./footer.js";
 import InformationSection from "./information_section.js";
@@ -24,6 +25,7 @@ class App extends React.Component {
 		return (
 			<React.Fragment>
         <Header />
+<Main />
 				<AcceptedCards />
 				<InformationSection />
 				<Footer />
