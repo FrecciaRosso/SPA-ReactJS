@@ -1,12 +1,12 @@
-import './scss/styles.scss';
-import './libs/slick-1.8.1/slick/slick.min.js';
+import '../scss/styles.scss';
+import '../libs/slick-1.8.1/slick/slick.min.js';
 import React from "react";
 import ReactDOM from "react-dom";
-import Main from "./main.js";
-import Header from "./header.js";
-import Footer from "./footer.js";
-import InformationSection from "./information_section.js";
-import AcceptedCards from "./accepted_cards.js";
+import Main from "./components/main.js";
+import Header from "./components/header.js";
+import Footer from "./components/footer.js";
+import InformationSection from "./components/information_section.js";
+import AcceptedCards from "./components/accepted_cards.js";
 
 $(document).ready(function(){
   	$('.top-banner').slick({
