@@ -27,7 +27,8 @@ module.exports = {
     },
     plugins: [
         new CopyWebpackPlugin([
-            {from:'./src/images',to:'images'} 
+            {from:'./src/images',to:'images'} ,
+            {from:'./src/mock',to:'mock'}
         ]),
         new MiniCssExtractPlugin({
             filename: '[name].css',
