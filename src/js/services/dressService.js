@@ -1,14 +1,11 @@
 import React from "react";
 
-class DressService extends React.Component {
-	componentDidMount() {
+export default function DressService() {
+	(function componentDidMount() {
 		fetch('http://localhost:8080/dist/mock/clothesCarousel.json')
 		.then(response => response.json())
 		.then(data => console.log(data));
-	}
-	render(props) {
-		return true;
-	}
+	})();
+	
+	return null;
 }
-
-export default DressService;
