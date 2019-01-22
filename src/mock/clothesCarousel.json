@@ -1,0 +1,28 @@
+{
+	"data": [
+		{
+			"title": "cloth 1",
+			"price": 10,
+			"src": "",
+			"salesStatus": false
+		},
+		{
+			"title": "cloth 2",
+			"price": 10,
+			"src": "",
+			"salesStatus": false
+		},
+		{
+			"title": "cloth 3",
+			"price": 10,
+			"src": "",
+			"salesStatus": false
+		},
+		{
+			"title": "cloth 4",
+			"price": 10,
+			"src": "",
+			"salesStatus": false
+		}
+	]
+}

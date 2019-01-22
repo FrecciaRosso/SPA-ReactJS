@@ -1,11 +1,11 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-//require("font-awesome-sass-loader");
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
     "mode": "development",
-    "entry": "./src/index.js",
+    "entry": "./src/js/index.js",
     "module": {
         "rules": [
             {
@@ -27,11 +27,18 @@ module.exports = {
     },
     plugins: [
         new CopyWebpackPlugin([
-            {from:'./src/images',to:'images'} 
+            {from:'./src/images',to:'images'} ,
+            {from:'./src/mock',to:'mock'}
         ]),
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css',
-        })
-    ]
+        }),
+        new LiveReloadPlugin()
+    ],
+    devServer: {
+        host: 'localhost',
+        port: 8080,
+        publicPath: '/dist/'
+    }
 }
