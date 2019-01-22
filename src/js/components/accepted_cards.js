@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import ListTemplate from "./list.js";
 
 class AcceptedCards extends React.Component {

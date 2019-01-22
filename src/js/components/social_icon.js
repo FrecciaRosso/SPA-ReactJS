@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import PropTypes from 'prop-types';
 
 class SocialIcon extends React.Component {
 	render() {
@@ -10,5 +10,9 @@ class SocialIcon extends React.Component {
 		);
 	}
 }
+
+SocialIcon.propTypes = {
+	classes: PropTypes.string,
+};
 
 export default SocialIcon;

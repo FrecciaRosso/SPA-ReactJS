@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from "react-dom";
 import TopBanner from "./topBanner.js"
 import FeedbackPanel from "./feedbackPanel.js";
 import CollectionsGrid from "./collections_grid.js";

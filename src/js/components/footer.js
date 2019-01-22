@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import ListTemplate from './list.js';
 
 class Footer extends React.Component {
@@ -33,11 +32,11 @@ class Footer extends React.Component {
 
 	render() {
 		return (
-	        <footer>
+			<footer>
 				{this.renderLeftSide()}
 				{this.renderRightSide()}
 			</footer>
-	    );	
+		);
 	}
 }
 

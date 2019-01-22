@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import ListTemplate from "./list.js";
 
 class CustomerServicePart extends React.Component {
@@ -116,7 +115,7 @@ class InformationSection extends React.Component {
 				<GuaranteePart />
 				<CampaignsPart />
 				<StoresPart />
-	    	</section>
+			</section>
 		);
 	}
 }
