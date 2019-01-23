@@ -10,31 +10,31 @@ import AcceptedCards from "./components/accepted_cards.js";
 import DressService from "./services/dressService.js";
 
 $(document).ready(function(){
-  $('.top-banner').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
+	$('.top-banner').slick({
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
 });
 
 class App extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-        <Header />
-        <Main />
+				<Header />
+				<Main />
 				<AcceptedCards />
 				<InformationSection />
 				<Footer />
-        <DressService />
+				<DressService />
 			</React.Fragment>
 		);
 	}
 }
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('app')
+	<App />,
+	document.getElementById('app')
 );
