@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 class Header extends React.Component {
 	render() {
@@ -31,7 +30,7 @@ class Header extends React.Component {
 					</aside>
 					<div className="menu">
 						<div className="left-side">MENU</div>
-						<div className="right-side"><button className="expander expand-menu"></button></div> 
+						<div className="right-side"><button className="expander expand-menu"></button></div>
 					</div>
 					<div className="expander-menu menu-list">
 						<a href="#">new<i className="fas fa-caret-down"></i></a>
