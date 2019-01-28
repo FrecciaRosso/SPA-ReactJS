@@ -15,26 +15,24 @@ class DressCarousel extends React.Component {
 		let list = this.state.data.map(
 			(item, index) => 
 			{
-				let {title, price, src, salesStatus} = item;
-				return (<div key={index}>
-					<p>{title}</p>
-					<p>{price}</p>
-					<p>{src}</p>
-					<p>{salesStatus}</p>
-				</div>);
+				let {className, title, price, src, salesStatus} = item;
+				return (<figure className="carousel-item" key={index}>
+					<img className={className} src={src}/>
+					<div className="carousel-item-caption">
+						<figcaption>{title}</figcaption>
+						<p>{price}</p>
+						<p>{salesStatus}</p>
+					</div>
+				</figure>);
 			});
 		return list;
 	}
 
 	render() {
 		return (
-			<React.Fragment>
+			<section className="clothes-carousel">
 				{this.renderList()}
-				<div>1</div>
-				<div>2</div>
-				<div>3</div>
-				<div>4</div>
-			</React.Fragment>
+			</section>
 		);
 	}
 }
