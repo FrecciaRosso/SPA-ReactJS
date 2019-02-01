@@ -41,12 +41,12 @@ class InformationPart extends React.Component {
 class SocialPart extends React.Component {
 	render() {
 		const icons = [
-			{ classses: "social-icon facebook" },
-			{ classses: "social-icon twitter" },
-			{ classses: "social-icon pinterest" },
-			{ classses: "social-icon tumblr" },
-			{ classses: "social-icon viber" },
-			{ classses: "social-icon skype" }
+			{ classes: "social-icon facebook" },
+			{ classes: "social-icon twitter" },
+			{ classes: "social-icon pinterest" },
+			{ classes: "social-icon tumblr" },
+			{ classes: "social-icon viber" },
+			{ classes: "social-icon skype" }
 		];
 		return(
 			<div className="part social-part">
