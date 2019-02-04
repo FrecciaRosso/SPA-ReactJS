@@ -3,28 +3,28 @@
 		{
 			"className": "carousel-cloth carousel-cloth-1",
 			"title": "COSY SWEATER",
-			"price": 10,
+			"price": "$76.95",
 			"src": "http://localhost:8080/dist/images/carouselCloth1.jpg",
 			"salesStatus": false
 		},
 		{
 			"className": "carousel-cloth carousel-cloth-2",
 			"title": "HIGH BOOTS",
-			"price": 10,
+			"price": "$59.95",
 			"src": "http://localhost:8080/dist/images/carouselCloth2.jpg",
 			"salesStatus": false
 		},
 		{
 			"className": "carousel-cloth carousel-cloth-3",
 			"title": "WHITE BLOUSE",
-			"price": 10,
+			"price": "$35.95",
 			"src": "http://localhost:8080/dist/images/carouselCloth3.jpg",
 			"salesStatus": false
 		},
 		{
 			"className": "carousel-cloth carousel-cloth-4",
 			"title": "SHORTS SUIT",
-			"price": 10,
+			"price": "$21.50",
 			"src": "http://localhost:8080/dist/images/carouselCloth4.jpg",
 			"salesStatus": false
 		}

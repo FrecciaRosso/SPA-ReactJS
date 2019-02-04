@@ -1,0 +1,32 @@
+{
+	"data": [
+		{
+			"className": "carousel-cloth carousel-cloth-1",
+			"title": "FUR BOOTIES",
+			"price": "$66.95",
+			"src": "http://localhost:8080/dist/images/featured1.jpg",
+			"salesStatus": false
+		},
+		{
+			"className": "carousel-cloth carousel-cloth-2",
+			"title": "GRETEL",
+			"price": "$39.95",
+			"src": "http://localhost:8080/dist/images/featured2.jpg",
+			"salesStatus": false
+		},
+		{
+			"className": "carousel-cloth carousel-cloth-3",
+			"title": "GREEN ELF",
+			"price": "$35.95",
+			"src": "http://localhost:8080/dist/images/featured3.jpg",
+			"salesStatus": false
+		},
+		{
+			"className": "carousel-cloth carousel-cloth-4",
+			"title": "MISS SANTA",
+			"price": "$45.50",
+			"src": "http://localhost:8080/dist/images/featured4.jpg",
+			"salesStatus": false
+		}
+	]
+}

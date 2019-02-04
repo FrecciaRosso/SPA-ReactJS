@@ -8,7 +8,7 @@ class DressCarousel extends React.Component {
 			"data" : [],
 			"tab": "0"
 		};
-		const dressService = new DressService();
+		const dressService = new DressService("clothesCarousel");
 		dressService.fetchData().then(data => {
 			this.setState({"data": data.data});
 			console.log(this.state);
@@ -21,52 +21,48 @@ class DressCarousel extends React.Component {
 		}
 		switch(i) {
 		case "0":
-			new DressService().fetchData().then(data => {
+			new DressService("clothesCarousel").fetchData().then(data => {
 				this.setState({"data": data.data, "tab": i});
 				console.log(this.state);
 			});
 			break;
 		case "1":
+			new DressService("designers").fetchData().then(data => {
+				this.setState({"data": data.data, "tab": i});
+				console.log(this.state);
+			});
+			break;
 		case "2":
+			new DressService("featured").fetchData().then(data => {
+				this.setState({"data": data.data, "tab": i});
+				console.log(this.state);
+			});
+			break;
 		case "3": 
-			this.setState({"data": [],
-				"tab": i});
+			new DressService("latest").fetchData().then(data => {
+				this.setState({"data": data.data, "tab": i});
+				console.log(this.state);
+			});
 			break;
 		}
-		/*this.setState({"data": [],
-			"tab": i});*/
 	}
 
 	renderList() {
 		let list;
-		if (this.state.tab == "0") {
-			list = this.state.data.map(
-				(item, index) => 
-				{
-					let {className, title, price, src, salesStatus} = item;
-					return (<figure className="carousel-item" key={index}>
-						<img className={className} src={src}/>
-						<div className="carousel-item-caption">
-							<figcaption>{title}</figcaption>
-							<p>{price}</p>
-							<p>{salesStatus}</p>
-						</div>
-					</figure>);
-				}
-			);
-		}
-		else if (this.state.tab == "1") {
-			alert("DESIGNERS");
-			console.log(this.state);
-		}
-		else if (this.state.tab == "2") {
-			alert("FEATURED");
-			console.log(this.state);
-		}
-		else if (this.state.tab == "3") {
-			alert("LATEST");
-			console.log(this.state);
-		}
+		list = this.state.data.map(
+			(item, index) => 
+			{
+				let {className, title, price, src} = item;
+				return (<figure className="carousel-item" key={index}>
+					<img className={className} src={src}/>
+					<div className="carousel-item-caption">
+						<figcaption>{title}</figcaption>
+						<p className="price">{price}</p>
+						<button className="add-to-cart-btn">ADD TO CART</button>
+					</div>
+				</figure>);
+			}
+		);
 		
 		return list;
 	}
