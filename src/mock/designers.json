@@ -27,6 +27,34 @@
 			"price": "$121.50",
 			"src": "http://localhost:8080/dist/images/tomFord4.jpg",
 			"salesStatus": false
+		},
+		{
+			"className": "carousel-cloth carousel-cloth-1",
+			"title": "JEANS",
+			"price": "$166.95",
+			"src": "http://localhost:8080/dist/images/gucciDress.jpg",
+			"salesStatus": false
+		},
+		{
+			"className": "carousel-cloth carousel-cloth-2",
+			"title": "WHITE BLAZER",
+			"price": "$159.95",
+			"src": "http://localhost:8080/dist/images/gucciFurJacket.jpg",
+			"salesStatus": false
+		},
+		{
+			"className": "carousel-cloth carousel-cloth-3",
+			"title": "WOOLEN BLAZER",
+			"price": "$135.95",
+			"src": "http://localhost:8080/dist/images/gucciSuit.jpg",
+			"salesStatus": false
+		},
+		{
+			"className": "carousel-cloth carousel-cloth-4",
+			"title": "BLACK BLAZER",
+			"price": "$121.50",
+			"src": "http://localhost:8080/dist/images/gucciTunic.jpg",
+			"salesStatus": false
 		}
 	]
 }

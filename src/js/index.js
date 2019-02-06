@@ -16,6 +16,12 @@ $(document).ready(function(){
 		slidesToShow: 1,
 		slidesToScroll: 1
 	});
+	$('.clothes-gallery').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		centerMode: true,
+		focusOnSelect: true
+	});
 });
 
 class App extends React.Component {

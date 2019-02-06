@@ -57,14 +57,16 @@ class DressCarousel extends React.Component {
 			(item, index) => 
 			{
 				let {className, title, price, src} = item;
-				return (<figure className="carousel-item" key={index}>
-					<img className={className} src={src}/>
-					<div className="carousel-item-caption">
-						<figcaption>{title}</figcaption>
-						<p className="price">{price}</p>
-						<button className="add-to-cart-btn">ADD TO CART</button>
-					</div>
-				</figure>);
+				return (
+					<figure className="carousel-item" key={index}>
+						<img className={className} src={src}/>
+						<div className="carousel-item-caption">
+							<figcaption>{title}</figcaption>
+							<p className="price">{price}</p>
+							<button className="add-to-cart-btn">ADD TO CART</button>
+						</div>
+					</figure>
+				);
 			}
 		);
 		
@@ -75,10 +77,10 @@ class DressCarousel extends React.Component {
 		return (
 			<section className="clothes-carousel">
 				<nav className="switch-tabs-panel">
-					<button onClick={() => this.handleClick("0")}>WHAT&#39;S HOT?</button>
-					<button onClick={() => this.handleClick("1")}>DESIGNERS</button>
-					<button onClick={() => this.handleClick("2")}>FEATURED</button>
-					<button onClick={() => this.handleClick("3")}>LATESET</button>
+					<button className="tab-btn" onClick={() => this.handleClick("0")}>WHAT&#39;S HOT?</button>
+					<button className="tab-btn" onClick={() => this.handleClick("1")}>DESIGNERS</button>
+					<button className="tab-btn" onClick={() => this.handleClick("2")}>FEATURED</button>
+					<button className="tab-btn" onClick={() => this.handleClick("3")}>LATESET</button>
 				</nav>
 				<div className="clothes-gallery">
 					{this.renderList()}
