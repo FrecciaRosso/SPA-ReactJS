@@ -17,8 +17,8 @@ $(document).ready(function(){
 		slidesToScroll: 1
 	});
 	$('.clothes-gallery').slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
+		slidesToShow: 6,
+		slidesToScroll: 3,
 		centerMode: true,
 		focusOnSelect: true
 	});

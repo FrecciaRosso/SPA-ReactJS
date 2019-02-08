@@ -2,13 +2,9 @@ import React from "react";
 import SocialIcon from "./social_icon.js";
 import PropTypes from 'prop-types';
 
-//import DressService from "../services/dressService.js";
-
 class ListTemplate extends React.Component {
 	constructor(props) {
 		super(props);
-		//const dressService = new DressService();
-		//dressService.fetchData().then(data => console.log(data));
 	}
 	renderList() {
 		let list;

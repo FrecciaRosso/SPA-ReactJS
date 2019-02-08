@@ -23,32 +23,26 @@ class DressCarousel extends React.Component {
 		let switchTabsBtns = document.getElementsByClassName("switch-tabs-panel")[0].children;
 		[].forEach.call(switchTabsBtns, (item) => {item.style.backgroundColor = "white"});
 		switchTabsBtns[i].style.backgroundColor = this.mainThemeColor;
+		let filename;
 		switch(i) {
 		case "0":
-			new DressService("clothesCarousel").fetchData().then(data => {
-				this.setState({"data": data.data, "tab": i});
-				console.log(this.state);
-			});
+			filename = "clothesCarousel";
 			break;
 		case "1":
-			new DressService("designers").fetchData().then(data => {
-				this.setState({"data": data.data, "tab": i});
-				console.log(this.state);
-			});
+			filename = "designers";
 			break;
 		case "2":
-			new DressService("featured").fetchData().then(data => {
-				this.setState({"data": data.data, "tab": i});
-				console.log(this.state);
-			});
+			filename = "featured";
 			break;
 		case "3": 
-			new DressService("latest").fetchData().then(data => {
-				this.setState({"data": data.data, "tab": i});
-				console.log(this.state);
-			});
+			filename = "latest";
 			break;
 		}
+
+		new DressService(filename).fetchData().then(data => {
+			this.setState({"data": data.data, "tab": i});
+			console.log(this.state);
+		});
 	}
 
 	renderList() {
@@ -60,6 +54,9 @@ class DressCarousel extends React.Component {
 				return (
 					<figure className="carousel-item" key={index}>
 						<img className={className} src={src}/>
+						<a href="#" className="tooltiptext">
+							SHOP IT
+						</a>
 						<div className="carousel-item-caption">
 							<figcaption>{title}</figcaption>
 							<p className="price">{price}</p>
