@@ -9,13 +9,6 @@ import InformationSection from "./components/information_section.js";
 import AcceptedCards from "./components/accepted_cards.js";
 
 $(document).ready(function(){
-	$('.top-banner').slick({
-		dots: true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 1,
-		slidesToScroll: 1
-	});
 	$('.clothes-gallery').slick({
 		slidesToShow: 6,
 		slidesToScroll: 3,

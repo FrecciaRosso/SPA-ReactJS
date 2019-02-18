@@ -7,7 +7,7 @@
 			
 		}
 		div.banner-page {
-			display: flex;
+			display: flex !important;
 			aside {
 				display: flex;
 				flex: 1;
@@ -39,6 +39,7 @@
 					font-family: $mainFont;
 					color: rgb(171, 158, 151);
 				}
+
 				button {
 					@include topBannerText;
 					background-color: $mainThemeColor;
@@ -54,6 +55,12 @@
 			}
 			aside.banner-page-text-part {
 				flex-direction: column;
+			}
+
+		}
+		.page-3, .page-4 {
+			aside.banner-page-text-part {
+				order: 2;
 			}
 		}
 		@include topBanner;

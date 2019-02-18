@@ -1,10 +1,18 @@
 import React from "react";
+import Slider from "react-slick";
 
 class TopBanner extends React.Component {
 	render() {
+		var settings = {
+			dots: true,
+			infinite: true,
+			speed: 500,
+			slidesToShow: 1,
+			slidesToScroll: 1
+		};
 		return (
-			<section className="top-banner">
-				<div className="banner-page">
+			<Slider {...settings} className="top-banner">
+				<div className="banner-page page-1">
 					<aside className="banner-page-text-part">
 						<h3 className="banner-text-1">Crazy</h3>
 						<h2 className="banner-text-2">CRAZY SUMMER</h2>
@@ -14,7 +22,7 @@ class TopBanner extends React.Component {
 					</aside>
 					<aside></aside>
 				</div>
-				<div className="banner-page">
+				<div className="banner-page page-2">
 					<aside className="banner-page-text-part">
 						<h3 className="banner-text-1">New</h3>
 						<h2 className="banner-text-2">Collection</h2>
@@ -24,8 +32,7 @@ class TopBanner extends React.Component {
 					</aside>
 					<aside></aside>
 				</div>
-				<div className="banner-page">
-					<aside></aside>
+				<div className="banner-page page-3">
 					<aside className="banner-page-text-part">
 						<h3 className="banner-text-1">Color</h3>
 						<h2 className="banner-text-2">CRAZY COLORS</h2>
@@ -33,8 +40,9 @@ class TopBanner extends React.Component {
 						<h2 className="banner-text-3">ADD COLORS</h2>
 						<button><span>SHOP NOW</span></button>
 					</aside>
+					<aside></aside>
 				</div>
-				<div className="banner-page">
+				<div className="banner-page page-4">
 					<aside className="banner-page-text-part">
 						<h3 className="banner-text-1">Light</h3>
 						<h2 className="banner-text-2">TENDER CLOTHES</h2>
@@ -44,7 +52,7 @@ class TopBanner extends React.Component {
 					</aside>
 					<aside></aside>
 				</div>
-			</section>
+			</Slider>
 		);
 	}
 }
