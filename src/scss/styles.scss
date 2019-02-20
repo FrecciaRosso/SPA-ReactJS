@@ -155,7 +155,7 @@ section.logo-part {
 			background-color: darken($mainThemeColor, 10%);
 			cursor: pointer;
 		}
-		&:hover + .expander-menu {
+		&:hover + .menu-list {
 			@include hoverExpanderButton;
 			top: 232px;
 		}

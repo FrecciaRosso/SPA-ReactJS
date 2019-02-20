@@ -8,15 +8,6 @@ import Footer from "./components/footer.js";
 import InformationSection from "./components/information_section.js";
 import AcceptedCards from "./components/accepted_cards.js";
 
-$(document).ready(function(){
-	$('.clothes-gallery').slick({
-		slidesToShow: 6,
-		slidesToScroll: 3,
-		centerMode: true,
-		focusOnSelect: true
-	});
-});
-
 class App extends React.Component {
 	render() {
 		return (

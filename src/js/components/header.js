@@ -32,7 +32,7 @@ class Header extends React.Component {
 						<div className="left-side">MENU</div>
 						<div className="right-side"><button className="expander expand-menu"></button></div>
 					</div>
-					<div className="expander-menu menu-list">
+					<div className="menu-list">
 						<a href="#">new<i className="fas fa-caret-down"></i></a>
 						<a href="#">designers<i className="fas fa-caret-down"></i></a>
 						<a href="#">women<i className="fas fa-caret-down"></i></a>

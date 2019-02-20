@@ -5,6 +5,7 @@ class TopBanner extends React.Component {
 	render() {
 		var settings = {
 			dots: true,
+			fade: true,
 			infinite: true,
 			speed: 500,
 			slidesToShow: 1,

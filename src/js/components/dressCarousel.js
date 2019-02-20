@@ -1,13 +1,20 @@
 import React from "react";
 import DressService from "../services/dressService.js";
+import Slider from "react-slick";
 
 class DressCarousel extends React.Component {
 	constructor(props) {
 		super(props);
 		this.mainThemeColor = "rgb(253, 146, 109)";
+		this.fileNames = {
+			"WHAT'S HOT?": {"file": "clothesCarousel", "index": 0},
+			"DESIGNERS": {"file": "designers", "index": 1},
+			"FEATURED": {"file": "featured", "index": 2},
+			"LATEST": {"file": "latest", "index": 1}
+		};
 		this.state = { 
 			"data" : [],
-			"tab": "0"
+			"tab": "WHAT'S HOT?"
 		};
 		const dressService = new DressService("clothesCarousel");
 		dressService.fetchData().then(data => {
@@ -16,31 +23,20 @@ class DressCarousel extends React.Component {
 		});
 	}
 
-	handleClick(i) {
-		if (this.state.tab == i) {
+	handleClick() {
+		let selection = (event.target.tagName == "SELECT") ? event.target.value : event.target.innerHTML;
+		let tabIndex = this.fileNames[selection].index;
+		let filename = this.fileNames[selection].file;
+		if (this.state.tab == selection) {
 			return;
 		}
 		let switchTabsBtns = document.getElementsByClassName("switch-tabs-panel")[0].children;
 		[].forEach.call(switchTabsBtns, (item) => {item.style.backgroundColor = "white"});
-		switchTabsBtns[i].style.backgroundColor = this.mainThemeColor;
-		let filename;
-		switch(i) {
-		case "0":
-			filename = "clothesCarousel";
-			break;
-		case "1":
-			filename = "designers";
-			break;
-		case "2":
-			filename = "featured";
-			break;
-		case "3": 
-			filename = "latest";
-			break;
-		}
 
+		switchTabsBtns[tabIndex].style.backgroundColor = this.mainThemeColor;
+		
 		new DressService(filename).fetchData().then(data => {
-			this.setState({"data": data.data, "tab": i});
+			this.setState({"data": data.data, "tab": selection});
 			console.log(this.state);
 		});
 	}
@@ -71,17 +67,50 @@ class DressCarousel extends React.Component {
 	}
 
 	render() {
+		var settings = {
+			dots: true,
+			infinite: false,
+			speed: 500,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			initialSlide: 0,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 640,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2,
+						initialSlide: 2
+					}
+				}
+			]
+		};
 		return (
 			<section className="clothes-carousel">
+				<select onChange={() => this.handleClick()}>
+					<option className="tab-btn">WHAT&#39;S HOT?</option>
+					<option className="tab-btn">DESIGNERS</option>
+					<option className="tab-btn">FEATURED</option>
+					<option className="tab-btn">LATEST</option>
+				</select>
 				<nav className="switch-tabs-panel">
 					<button className="tab-btn" onClick={() => this.handleClick("0")}>WHAT&#39;S HOT?</button>
 					<button className="tab-btn" onClick={() => this.handleClick("1")}>DESIGNERS</button>
 					<button className="tab-btn" onClick={() => this.handleClick("2")}>FEATURED</button>
-					<button className="tab-btn" onClick={() => this.handleClick("3")}>LATESET</button>
+					<button className="tab-btn" onClick={() => this.handleClick("3")}>LATEST</button>
 				</nav>
-				<div className="clothes-gallery">
+				<Slider {...settings} className="clothes-gallery">
 					{this.renderList()}
-				</div>
+				</Slider>
 			</section>
 		);
 	}
