@@ -19,7 +19,7 @@
 			"title": "WOOLEN BLAZER",
 			"price": "$135.95",
 			"src": "http://localhost:8080/dist/images/tomFord3.jpg",
-			"salesStatus": false
+			"salesStatus": true
 		},
 		{
 			"className": "carousel-cloth carousel-cloth-4",

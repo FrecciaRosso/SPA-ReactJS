@@ -5,14 +5,14 @@
 			"title": "FUR BOOTIES",
 			"price": "$66.95",
 			"src": "http://localhost:8080/dist/images/featured1.jpg",
-			"salesStatus": false
+			"salesStatus": true
 		},
 		{
 			"className": "carousel-cloth carousel-cloth-2",
 			"title": "GRETEL",
 			"price": "$39.95",
 			"src": "http://localhost:8080/dist/images/featured2.jpg",
-			"salesStatus": false
+			"salesStatus": true
 		},
 		{
 			"className": "carousel-cloth carousel-cloth-3",

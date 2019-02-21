@@ -32,93 +32,123 @@
 				background-color: $mainThemeColor;
 			}
 		}
-		.slick-slide {
-			width: 200px !important;
+		.slick-track {
+			display: flex;
+			justify-content: space-between;
+			.slick-slide {
+				width: 200px !important;
+				figure.carousel-item {
+					display: block;
+					.sale-mark {
+						font-size: 10px;
+						text-align: left;
+						padding: 1%;
+						background-color: gray;
+						color: white;
+						position: absolute;
+						margin-top: 10px;
+						margin-left: 25px;
+						z-index: 2;
+						width: 40px;
+						height: 40px;
+						&::after {
+							content: "";
+							position: absolute;
+							top: 16px;
+							left: 0px;
+							width: 0; 
+							height: 0; 
+							border-left: 30px solid transparent;
+							border-right: 30px solid transparent;
+							border-top: 30px solid white;
+							transform: rotate(-45deg);
+						}
+					}
+					.carousel-cloth {
+						position: relative;
+						width: 150px;
+						height: 300px;
+						display: block;
+						margin: 10px auto 20px auto;
+					}
+					.tooltiptext {
+						color: white;
+						opacity: 0;
+						width: 100px;
+						height: 100px;
+						background-color: black;
+						color: #fff;
+						text-align: center;
+						border-radius: 6px;
+						padding: 5px 0;
+						top: 40%;
+						border-radius: 50%;
+						left: 0;
+						right: 0;
+						margin: 0 auto;
+						position: absolute;
+						display: flex;
+						flex-wrap: wrap;
+						align-content: center;
+						justify-content: center;
+						text-decoration: none;
+						z-index: 1;
+						&:before {
+							width: 100%;
+							font-family: 'Font Awesome 5 Free';
+							font-weight: 800;
+							content: fa-content($fa-var-shopping-bag);
+						}
+						&:hover {
+							background-color: lighten(black, 10%);
+						}
+						transition: opacity 0.5s;
+					}
+					
+					&:hover .tooltiptext {
+						opacity: 1;
+					}
+					.carousel-item-caption {
+						position: absolute;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						padding: 5%;
+						width: 150px;
+						right: 0;
+						left: 0;
+						bottom: -10px;
+						margin: auto;
+						background-color: white;
+						font-size: 10px;
+						.price {
+							font-weight: solid;
+							font-size: 14px;
+							margin: 1px 0;
+						}
+						.add-to-cart-btn {
+							background-color: $mainThemeColor;
+							color: white;
+							border: none;
+							border-bottom: solid 2px darken($mainThemeColor, 10%);
+							width: 65%;
+							transition: 0.3s;
+							&:after {
+								content: "+";
+								color: white;
+								font-weight: bold;
+							}
+							&:hover {
+								background-color: lighten($mainThemeColor, 10%) !important;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
-	figure.carousel-item {
-		display: block;
-		.carousel-cloth {
-			position: relative;
-			width: 150px;
-			height: 300px;
-			display: block;
-			margin: 10px auto 20px auto;
-		}
-		.tooltiptext {
-			color: white;
-			opacity: 0;
-			width: 100px;
-			height: 100px;
-			background-color: black;
-			color: #fff;
-			text-align: center;
-			border-radius: 6px;
-			padding: 5px 0;
-			top: 40%;
-			border-radius: 50%;
-			left: 0;
-			right: 0;
-			margin: 0 auto;
-			position: absolute;
-			display: flex;
-			flex-wrap: wrap;
-			align-content: center;
-			justify-content: center;
-			text-decoration: none;
-			z-index: 1;
-			&:before {
-				width: 100%;
-				font-family: 'Font Awesome 5 Free';
-				font-weight: 800;
-				content: fa-content($fa-var-shopping-bag);
-			}
-			&:hover {
-				background-color: lighten(black, 10%);
-			}
-			transition: opacity 0.5s;
-		}
-		
-		&:hover .tooltiptext {
-			opacity: 1;
-		}
-		.carousel-item-caption {
-			position: absolute;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding: 5%;
-			width: 150px;
-			right: 0;
-			left: 0;
-			bottom: -10px;
-			margin: auto;
-			background-color: white;
-			font-size: 10px;
-			.price {
-				font-weight: solid;
-				font-size: 14px;
-				margin: 1px 0;
-			}
-			.add-to-cart-btn {
-				background-color: $mainThemeColor;
-				color: white;
-				border: none;
-				border-bottom: solid 2px darken($mainThemeColor, 10%);
-				width: 65%;
-				transition: 0.3s;
-				&:after {
-					content: "+";
-					color: white;
-					font-weight: bold;
-				}
-				&:hover {
-					background-color: lighten($mainThemeColor, 10%) !important;
-					cursor: pointer;
-				}
-			}
-		}
-	}
+	
 	.switch-tabs-panel {
 		display: none;
 	}
@@ -164,6 +194,23 @@
 				}
 				&:nth-child(1) {
 					background-color: $mainThemeColor;
+				}
+			}
+		}
+		.clothes-gallery {
+			.slick-track {
+				.slick-slide {
+					width: 250px !important;
+					figure.carousel-item {
+						.carousel-cloth {
+							width: 220px;
+							height: 440px;
+						}
+						.carousel-item-caption {
+							bottom: 20px;
+							width: 220px;
+						}
+					}
 				}
 			}
 		}

@@ -19,7 +19,7 @@
 			"title": "WHITE BLOUSE",
 			"price": "$35.95",
 			"src": "http://localhost:8080/dist/images/carouselCloth3.jpg",
-			"salesStatus": false
+			"salesStatus": true
 		},
 		{
 			"className": "carousel-cloth carousel-cloth-4",
@@ -40,14 +40,14 @@
 			"title": "HIGH BOOTS",
 			"price": "$59.95",
 			"src": "http://localhost:8080/dist/images/carouselCloth6.jpg",
-			"salesStatus": false
+			"salesStatus": true
 		},
 		{
 			"className": "carousel-cloth carousel-cloth-3",
 			"title": "WHITE BLOUSE",
 			"price": "$35.95",
 			"src": "http://localhost:8080/dist/images/carouselCloth7.jpg",
-			"salesStatus": false
+			"salesStatus": true
 		},
 		{
 			"className": "carousel-cloth carousel-cloth-4",

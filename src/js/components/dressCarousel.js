@@ -46,9 +46,12 @@ class DressCarousel extends React.Component {
 		list = this.state.data.map(
 			(item, index) => 
 			{
-				let {className, title, price, src} = item;
+				let {className, title, price, src, salesStatus} = item;
 				return (
 					<figure className="carousel-item" key={index}>
+						{salesStatus && 
+							<div className="sale-mark">SALE</div>
+						}
 						<img className={className} src={src}/>
 						<a href="#" className="tooltiptext">
 							SHOP IT
@@ -76,7 +79,7 @@ class DressCarousel extends React.Component {
 			initialSlide: 0,
 			responsive: [
 				{
-					breakpoint: 768,
+					breakpoint: 769,
 					settings: {
 						slidesToShow: 3,
 						slidesToScroll: 3,
@@ -85,7 +88,7 @@ class DressCarousel extends React.Component {
 					}
 				},
 				{
-					breakpoint: 640,
+					breakpoint: 641,
 					settings: {
 						slidesToShow: 2,
 						slidesToScroll: 2,
