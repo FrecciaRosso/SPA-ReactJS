@@ -1,6 +1,8 @@
 import React from "react";
 import DressService from "../services/dressService.js";
 import Slider from "react-slick";
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class DressCarousel extends React.Component {
 	constructor(props) {
@@ -41,6 +43,11 @@ class DressCarousel extends React.Component {
 		});
 	}
 
+	addToCart(title, price) {
+		console.log("title: " + title + ", price: " + price);
+		this.props.onAddToCart(title, price);
+	}
+
 	renderList() {
 		let list;
 		list = this.state.data.map(
@@ -59,7 +66,7 @@ class DressCarousel extends React.Component {
 						<div className="carousel-item-caption">
 							<figcaption>{title}</figcaption>
 							<p className="price">{price}</p>
-							<button className="add-to-cart-btn">ADD TO CART</button>
+							<button className="add-to-cart-btn" onClick={() => this.addToCart(title, price)}>ADD TO CART</button>
 						</div>
 					</figure>
 				);
@@ -92,7 +99,9 @@ class DressCarousel extends React.Component {
 					settings: {
 						slidesToShow: 2,
 						slidesToScroll: 2,
-						initialSlide: 2
+						initialSlide: 2,
+						rows: 2,
+						slidesPerRow: 1
 					}
 				}
 			]
@@ -119,4 +128,18 @@ class DressCarousel extends React.Component {
 	}
 }
 
-export default DressCarousel;
+DressCarousel.propTypes = {
+	testStore: PropTypes.array,
+	onAddToCart: PropTypes.func
+};
+
+export default connect(
+	state => ({
+		testStore: state
+	}),
+	dispatch => ({
+		onAddToCart: (itemName, itemPrice) => {
+			dispatch({ type: 'ADD_TO_CART', item: {name: itemName, price: itemPrice} })
+		}
+	})
+)(DressCarousel);

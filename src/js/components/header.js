@@ -1,6 +1,13 @@
 import React from "react";
+import { connect } from "react-redux";
+import PropTypes from 'prop-types';
 
 class Header extends React.Component {
+	countShopCartTotal() {
+		return this.props.testStore.reduce((accumulator, currentValue) => {
+			return accumulator + +(currentValue.price.slice(1));
+		}, 0);
+	}
 	render() {
 		return (
 			<header>
@@ -25,7 +32,7 @@ class Header extends React.Component {
 						</div>
 						<div className="cart">
 							<div className="left-side"><i className="fas fa-shopping-basket fa-lg"></i></div>
-							<div className="right-side">0 ITEMS | 0 $</div>
+							<div className="right-side">{this.props.testStore.length} ITEMS | {this.countShopCartTotal()} $</div>
 						</div>
 					</aside>
 					<div className="menu">
@@ -45,4 +52,12 @@ class Header extends React.Component {
 	}
 }
 
-export default Header;
+Header.propTypes = {
+	testStore: PropTypes.array
+};
+
+export default connect(
+	state => ({
+		testStore: state
+	})
+)(Header);

@@ -47,7 +47,9 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "prop-types": "^15.6.2",
+    "react-redux": "6.0.1",
     "react-slick": "^0.23.2",
+    "redux": "4.0.1",
     "slick-carousel": "^1.8.1"
   }
 }

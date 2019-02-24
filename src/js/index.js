@@ -7,6 +7,20 @@ import Header from "./components/header.js";
 import Footer from "./components/footer.js";
 import InformationSection from "./components/information_section.js";
 import AcceptedCards from "./components/accepted_cards.js";
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+function addItemToShopCart(state = [], action) {
+	if (action.type == "ADD_TO_CART") {
+		return [
+			...state,
+			action.item
+		];
+	}
+	return state;
+}
+
+const store = createStore(addItemToShopCart);
 
 class App extends React.Component {
 	render() {
@@ -23,6 +37,8 @@ class App extends React.Component {
 }
 
 ReactDOM.render(
-	<App />,
+	<Provider store={store}>
+		<App />
+	</Provider>,
 	document.getElementById('app')
 );
