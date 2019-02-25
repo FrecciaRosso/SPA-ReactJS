@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
 	countShopCartTotal() {
@@ -31,7 +32,11 @@ class Header extends React.Component {
 							<div><i className="fas fa-caret-down"></i></div>
 						</div>
 						<div className="cart">
-							<div className="left-side"><i className="fas fa-shopping-basket fa-lg"></i></div>
+							<div className="left-side">
+								<Link to="/shopcart">
+									<i className="fas fa-shopping-basket fa-lg"></i>
+								</Link>
+							</div>
 							<div className="right-side">{this.props.testStore.length} ITEMS | {this.countShopCartTotal()} $</div>
 						</div>
 					</aside>
