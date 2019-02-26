@@ -1,9 +1,11 @@
-export default function DressService() {
-	(function componentDidMount() {
-		fetch('http://localhost:8080/dist/mock/clothesCarousel.json')
-			.then(response => response.json())
-			.then(data => console.log(data));
-	})();
-
-	return null;
+class DressService {
+	constructor(fileName) {
+		this.url = 'http://localhost:8080/dist/mock/' + fileName + '.json';
+	}
+	fetchData() {
+		return fetch(this.url)
+			.then(response => response.json());
+	}
 }
+
+export default DressService;

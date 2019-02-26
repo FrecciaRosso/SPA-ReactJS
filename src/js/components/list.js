@@ -29,6 +29,7 @@ class ListTemplate extends React.Component {
 	}
 
 	render() {
+
 		return(this.renderList());
 	}
 }

@@ -1,6 +1,14 @@
 import React from "react";
+import { connect } from "react-redux";
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
+	countShopCartTotal() {
+		return this.props.testStore.reduce((accumulator, currentValue) => {
+			return accumulator + +(currentValue.price.slice(1));
+		}, 0);
+	}
 	render() {
 		return (
 			<header>
@@ -24,15 +32,19 @@ class Header extends React.Component {
 							<div><i className="fas fa-caret-down"></i></div>
 						</div>
 						<div className="cart">
-							<div className="left-side"><i className="fas fa-shopping-basket fa-lg"></i></div>
-							<div className="right-side">0 ITEMS | 0 $</div>
+							<div className="left-side">
+								<Link to="/shopcart">
+									<i className="fas fa-shopping-basket fa-lg"></i>
+								</Link>
+							</div>
+							<div className="right-side">{this.props.testStore.length} ITEMS | {this.countShopCartTotal()} $</div>
 						</div>
 					</aside>
 					<div className="menu">
 						<div className="left-side">MENU</div>
 						<div className="right-side"><button className="expander expand-menu"></button></div>
 					</div>
-					<div className="expander-menu menu-list">
+					<div className="menu-list">
 						<a href="#">new<i className="fas fa-caret-down"></i></a>
 						<a href="#">designers<i className="fas fa-caret-down"></i></a>
 						<a href="#">women<i className="fas fa-caret-down"></i></a>
@@ -45,4 +57,12 @@ class Header extends React.Component {
 	}
 }
 
-export default Header;
+Header.propTypes = {
+	testStore: PropTypes.array
+};
+
+export default connect(
+	state => ({
+		testStore: state
+	})
+)(Header);
